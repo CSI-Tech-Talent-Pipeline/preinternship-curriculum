@@ -49,9 +49,23 @@
     2. [ array ]
     3. function (){}
 
-Different data types are pass by reference and pass by value.
+Primitive types are unique, distinct and can't be modified, whereas non-primitive or reference types can be mutated.
 
-### Primitives Data Type
+```js
+let a = 1;
+let b = 1;
+a += 1;
+console.log(a === b); // false
+```
+
+```js
+a = {};
+b = a;
+a['key'] = 'value';
+console.log(a === b) // true
+```
+
+### Primitive Data Type
 * Undefined
   * A variable that is declared but not assigned a value
 
@@ -110,7 +124,9 @@ Different data types are pass by reference and pass by value.
 
 ### Primitives Data Type
 **Pass-by-Value**
-when you declare a variable and pass it to a function, a *copy* of the variable is passed, not the original object in memory.
+When you declare a variable and pass it to a function, the value of the variable is passed, the variable cannot be reassigned within the function.
+
+**IMPORTANT NOTE:** If you pass a variable pointing to a non-primitive type into a function, like an object, then the value passed is a reference to that object, not a copy of the object. So, if you modify the object by changing its properties within the function, the variable in the outer scope will still refer to the same **now modified** object. This will be an important consideration when we work with React later on in the course.
 
 ![toilet-paper-undefined-null](https://i.imgur.com/aorgaMH.png)
 
@@ -118,7 +134,7 @@ when you declare a variable and pass it to a function, a *copy* of the variable 
 
 ### Non-Primitives Data Type
 * Array
-    * Arrays can contain any data type.
+    * Arrays can contain any data type. 
 
     ```js
     let arr = [1, 2, 3, "a", "b", "c", { hello: 'world' }]  
@@ -129,6 +145,7 @@ when you declare a variable and pass it to a function, a *copy* of the variable 
       console.log(arr[i])
     }
     ```
+    In practice, it's best to store the same type.
 
 
 * Object
@@ -189,7 +206,7 @@ when you declare a variable and pass it to a function, a *copy* of the variable 
       ```
 
 ### Non-Primitives Data Type
-**Pass-by-reference**: when you declare a variable and pass it to a function, the object in memory itself is passed, not a copy of the object.
+**Pass-by-value**: when you declare a variable and pass it to a function, the value of the object in memory itself is passed, not a copy of the object, and not the variable itself. If the object is mutated within the function, then the variable will continue to refer to that same (mutated) object.
 
 
 
@@ -237,8 +254,9 @@ typeof NaN //'number'
       ```js
       const variableName = 345
       ```
+    * Reference types like objects and arrays are commonly declared with `const` as they can still be mutated by invoking methods that add, modify, or delete their contents. But, the variable itself cannot be reassigned to a new value.
 
-### Reassigning the variable
+### Reassigning variables
   * let
     ```js
     let variableName = 123
@@ -258,9 +276,9 @@ typeof NaN //'number'
 
 
 ### Higher-Order Function
-  * A Higher-Order Function is any function that operates on any other function, either by taking them in as arguments or returning them.
+  * A Higher-Order Function is any function that operates on any other function(s), either by taking them in as arguments or returning one.
   
-  * In JavaScript, this is facilitated by the fact that functions are First-Class Functions
+  * In JavaScript, this is facilitated by the fact that functions are [First-Class objects](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function).
 
   ```js
   function outerFunc(callbackFunc){
@@ -398,11 +416,14 @@ typeof NaN //'number'
 
 ## External Resources
 - [ECMA](https://en.wikipedia.org/wiki/Ecma_International)
+
 - [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
 - [HTTP Request Response Cycle](https://www.oreilly.com/library/view/using-google-app/9780596802462/ch01.html)
+- [Functions as First Class objects](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
 - [Browser Wars](https://en.wikipedia.org/wiki/Browser_wars)
 - [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich)
 - [Netscape](https://en.wikipedia.org/wiki/Netscape)
 - [How to use console.log and others](https://console.spec.whatwg.org/#dir)
-- [Javascript Equality Table](https://dorey.github.io/JavaScript-Equality-Table/
+- [Javascript Equality Table](https://dorey.github.io/JavaScript-Equality-Table/)
+- [C++ vs JavaScript](https://www.koombea.com/blog/c-vs-javascript/)
