@@ -1,27 +1,27 @@
-# Tech Talent Pipeline Residency: Fall 2022 Bootcamp
+# Tech Talent Pipeline Residency: Summer 2023 Bootcamp
 
 Class Days and Class Times:
 
 Monday - Friday, 10:00AM - 4:00PM
 
 Dates:
-January 3rd, 2022 (Monday) - January 28th, 2022 (Friday)
+June 12th, 2023 (Monday) - August 18th, 2023 (Friday)
 
-Blackboard: https://bbhosted.cuny.edu/webapps/blackboard/content/listContent.jsp?course_id=_2072238_1&content_id=_61473180_1&mode=reset
+Blackboard: https://bbhosted.cuny.edu/webapps/blackboard/content/listContent.jsp?content_id=_75836936_1&course_id=_2267876_1&mode=reset
 
-Slack Workspace: https://ttpatcsi.slack.com/archives/C02KVJ0HREH
+Slack Workspace: https://ttpatcsi.slack.com/archives/C055296Q6GJ
 
-Lead Instructor: Greem Lee
+Lead Instructor: Dakota Martinez
 
-Lead Teaching Assistant: Alexander Manger
+Lead Teaching Assistant: Ahsan Ahmed
 
-Teaching Assistants: Andrea Habib, Alexey Aulov, Johnathan Leibovici, Jacob Chen, Walter Broncano
+Teaching Assistants: Nicky Liu, Jean Luis Urena, Jorge Vasquez
 
-Program Manager: Sabine Salandy
+Program Manager: Farzana Ruzehaji
 
 Career Coach: Omar Duran
 
-Emails: greem.lee@csi.cuny.edu, sabine.salandy@csi.cuny.edu, omar.duran@csi.cuny.edu
+Emails: Dakota.Martinez@csi.cuny.edu, Sabine.Salandy@csi.cuny.edu, Farzana.Ruzehaji@csi.cuny.edu  
 
 ---
 
@@ -37,47 +37,75 @@ Daily Schedule (Subject To Change!)
 
 ## Curriculum Index (Tentative, Subject To Change)
 
-- Class Session 0: Tech Talent Pipeline Orientation | (12/29/2021)
+#### Week 1
+- Monday 6/12/23 - Hackerrank assessment unit testing discussion
+- Tuesday 6/13/23 - **Lesson #1** Introduction to HTML/CSS, Bootstrap, Flexbox & Grid
+- Wednesday 6/14/23 - **Lesson #2** Bootstrap, Intro to Git & GitHub
+- Thursday 6/15/23 - **Lesson #3** Intro to JavaScript
+- Friday 6/16/23 - Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule
 
-- Class Session 1: Pilot Assessment | (01/03/2022)
+#### Week 2
+- Monday 6/19/23 - No class (Juneteenth)
+- Tuesday 6/20/23 - **Lesson #4** Using JavaScript for Algorithms
+- Wednesday 6/21/23 - **Lesson #5** Algorithms and Unit Testing
+- Thursday 6/22/23 - **Lesson #6** DOM Manipulation
+- Friday 6/23/23 - Cover Letter and Email Communications
 
-- Class Session 2: Collaborative Workflow I | (01/04/2022)
+#### Week 3
+- Monday 6/26/23 - **Lesson #7** Introduction to React
+- Tuesday 6/27/23 - **Lesson #8** Introduction to External API Requests and ReactJS
+- Wednesday 6/28/23 - **Lesson #9** Introduction to External API Requests and ReactJS Cont'd
+- Thursday 6/29/23 - **Lesson #10** React Router and Client-Side Routing in a SPA
+- Friday 6/30/23 - **Lesson #11** Introduction to Technical Interviewing/Cyclic Sort/ Fast _ Slow Pointers
 
-- Class Session 3: Introduction to JS | (01/05/2022)
+#### Week 4
+- Monday 7/3/23 - No class
+- Tuesday 7/4/23 - No class
+- Wednesday 7/5/23 - **Lesson #12** State Management with Redux and React-Redux
+- Thursday 7/6/23 - **Lesson #13** Introduction to NodeJS + ExpressJS Pt 1
+- Friday 7/7/23 - **Lesson #14** Merge Intervals/ Reverse Linked List In Place
 
-- Class Session 4: DOM Manipulation | (01/06/2022)
+#### Week 5
+- Monday 7/10/23 - **Lesson #15** Introduction to NodeJS + ExpressJS Pt 2
+- Tuesday 7/11/23 - **Lesson #16** CRUD App I
+- Wednesday 7/12/23 - **Lesson #17** CRUD App II
+- Thursday 7/13/23 Behavioral Interviewing/ Team & Technical Project Building
+- Friday 7/14/23 - **Lesson #18** CRUD App III
 
-- Class Session 5: Introduction to React | (01/07/2022)
+#### Week 6
+- Monday 7/17/23 - **Lesson #19** Setting up a server on AWS I
+- Tuesday 7/18/23 - **Lesson #20** Setting up a server on AWS II
+- Wednesday 7/19/23 - **Lesson #21** Setting up a server on AWS III
+- Thursday 7/20/23 - Capstone project I
+- Friday 7/21/23 - **Lesson #22** Trees DFS/ Two Pointers
 
-- Class Session 6: Introduction to External API Requests and ReactJS | (01/10/2022)
+#### Week 7
+- Monday 7/24/23 - **Lesson #23** Capstone Project II- React JS and/or Remix JS
+- Tuesday 7/25/23 - Capstone Project III
+- Wednesday 7/26/23 - Capstone Project IV
+- Thursday 7/27/23 - Capstone Project (first iteration staff takes lead)
+- Friday 7/28/23 - **Lesson #24** Sliding Window/ Trees BFS
 
-- Class Session 7: Introduction to External API Requests and ReactJS Continued | (01/11/2022)
+#### Week 8
+- Monday 7/31/23 - Capstone Project V
+- Tuesday 8/1/23 - Capstone Project VI
+- Wednesday 8/2/23 - Capstone Project VII
+- Thursday 8/3/23 - Mock Behavioral Interviews
+- Friday 8/4/23 - Capstone Project VIII
 
-- Class Session 8: React Router and Client-Side Routing in a SPA | (01/12/2022)
+#### Week 9
+- Monday 8/7/23 - Mock Technical Interviews
+- Tuesday 8/8/23 - Capstone Project (2nd iteration staff takes lead)
+- Wednesday 8/9/23 - Capstone Project IX
+- Thursday 8/10/23 - Capstone Project X
+- Friday 8/11/23 - Capstone Project XI
 
-- Class Session 9: State Management with Redux and React-Redux | (01/13/2022)
-
-- Class Session 10: Introduction to NodeJS + ExpressJS | (01/14/2022)
-
-- Class Session 11: CRUD App I | (01/17/2022)
-
-- Class Session 12: CRUD App II | (01/18/2022)
-
-- Class Session 13: CRUD App III | (01/19/2022)
-
-- Class Session 14: Project Building I | (01/20/2022)
-
-- Class Session 15: Project Building II | (01/21/2022)
-
-- Class Session 16: Project Building III | (01/24/2022)
-
-- Class Session 17: Project Building IV | (01/25/2022)
-
-- Class Session 18: Project Building V | (01/26/2022)
-
-- Class Session 19: Project Building VI | (01/27/2022)
-
-- Class Session 20: Exit Assessment and Demo Day | (01/28/2022)
+#### Week 10
+- Monday 8/14/23 - Capstone Project XII
+- Tuesday 8/15/23 - Capstone Project 3rd Iteration
+- Wednesday 8/16/23 - Career Search Framework & Ongoing Program Expectations (Farzana)
+- Thursday 8/17/23 - Final Capstone Presentations
+- Friday 8/18/23 - Hackerrank Assessment/End Pre-internship course
 
 ---
 
@@ -85,20 +113,22 @@ Daily Schedule (Subject To Change!)
 
 **Pre-Bootcamp Material**
 
-- [Assignment 0](https://www.dropbox.com/scl/fi/y1ceyu3u5lsu5maeoq595/Pre-Internship-Seminar-2022_-Prework.pptx?dl=0&rlkey=p9f0dobzeg41cuy7kpurfcygk)
+- [Assignment 0](https://www.dropbox.com/s/8wu2tq4xavjwq4t/Pre-Internship%20Seminar%202023_%20Prework.pdf?dl=0)
 - [CSS Diner Exercise](https://flukeout.github.io/)
 - [Flexbox Froggy Exercise](https://flexboxfroggy.com/)
 - [Flexbox Zombies Exercise](https://mastery.games/p/flexbox-zombies)
 
-**Class Session 1: Hackerrank Assessment, Onboarding, Assignment 0 (01/03/2022)**
+**Day 1: Hackerrank Assessment, Onboarding, Assignment 0, Unit testing discussion (06/12/23)**
 
 - [Hackerrank Pre-Assessment](https://www.hackerrank.com/test/eni9i5rsi03/2e1d4f950c4c3ae0cce9126578719d6f?try_test=true&email=ka.tom@cuny.edu)
 
-- [Blackboard/ Onboarding](https://bbhosted.cuny.edu/webapps/blackboard/content/listContent.jsp?course_id=_2072238_1&content_id=_61473180_1&mode=reset)
+- [Blackboard/ Onboarding](https://bbhosted.cuny.edu/webapps/blackboard/content/listContent.jsp?content_id=_75836936_1&course_id=_2267876_1&mode=reset)
+
+**Day 2: Introduction to HTML/CSS, Bootstrap, Flexbox & Grid (06/13/23)**
 
 - [Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page)
 
-**Class Session 2: Git/Github/Collaborative Software Development (Pair Programming) (01/04/2022)**
+**Class Day 3: Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
 
 - [Git Codecademy Tutorial](https://www.codecademy.com/learn/learn-git)
 
@@ -112,7 +142,9 @@ Daily Schedule (Subject To Change!)
 
 - [Git and GitHub Slides - Part II](https://docs.google.com/presentation/d/1Qkz1Z83P2b2EUFDrMN8L1X7BcMwZzzkSqCKCI8INH78/edit?usp=sharing)
 
-**Class Session 3: Javascript Basics Overview (01/05/2022)**
+**Day 4: Intro to JavaScript (06/15/23)**
+
+**Class Session 5: Javascript Basics Overview (06/16/23)**
 
 _Suggested Pre-Reading (you could also consider the first two chapers as well, but the links below are the more complex topics that we will be covering)_
 
