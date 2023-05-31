@@ -308,7 +308,7 @@ typeof NaN //'number'
   * To solidify understanding of higher order functions and callbacks, we are going to look at some of the more popular iterative array methods provided for us by JavaScript.
   * Some of the most popular are forEach, map, and reduce
 
-  ### array.forEach() //vals
+  ### array.forEach() 
   * The forEach method takes a callback and runs it once for each element in the array.
   * forEach can also take an optional index argument to keep track of the index that you are currently working with. 
   * forEach function does not mutate the array that it is being operated on, and does not return any value itself.
@@ -334,7 +334,7 @@ typeof NaN //'number'
     //4.  one liner 
     numbers.forEach(( item ) => console.log(item))
 
-    //Quizzzzz iterate this letter
+    //Quizzzzz iterate over these letters and make an object with letters as keys and a count of their occurrences as values
     let letters = ["a", "b", "a", "c", "c"]
 
     // { a: 2, b: 1, c: 2}
@@ -343,57 +343,59 @@ typeof NaN //'number'
   ### array.map() 
   * The map method takes a callback function and creates a new array by performing the callback on each array element.
   * map can also take an optional index array.
-  * map does not mutate the original array. It instead returns a new array of the same length as the original array with the result of operating the callback function.
-   ```js
-      // .map 
-      const itemArray = [
-          {genre: "val1", bpm: "val2"},
-          {genre: "hip hop", bpm: 130 },
-          {genre: "pop", bpm: 120},
-          {genre: "indie rock", bpm: 100}
-      ]
+  * map does not mutate the original array. It instead returns a new array, of the same length as the original array, containing the return values of each call to the callback function as its elements.
+  ```js
+  // .map 
+  const itemArray = [
+    {genre: "val1", bpm: "val2"},
+    {genre: "hip hop", bpm: 130 },
+    {genre: "pop", bpm: 120},
+    {genre: "indie rock", bpm: 100}
+  ]
 
-      const genreName = itemArray.map ( (eachItemObj) => {
-          return eachItemObj.bpm
-      })
+  const genreName = itemArray.map ( (eachItemObj) => {
+    return eachItemObj.bpm
+  })
 
-      console.log(genreName)
-    ```
+  console.log(genreName)
+  ```
   
 
 
-### array.reduce() // 1 val
-  * The reduce method takes a callback function and an iterator (which can be any data type) and runs the callback on each array element to reduce it to a single value.
-  * Your callback should take at least two arguments, which are regularly known as previous and next. These will be used to reduce each value in the array into the iterator, and as such your callback must return a value to be used on the next iteration.
-  * Reduce does not mutate the original array, but it does return a new value based on the callback function.
+### array.reduce() 
+
+* The reduce method takes a callback function and an iterator (which can be any data type) and runs the callback on each array element to reduce it to a single value.
+* Your callback should take at least two arguments, which are regularly known as `accumulator` and `current`. These will be used to reduce each value in the array into the iterator, and as such your callback must return a value to be used on the next iteration.
+* Reduce does not mutate the original array, but it does return a new value based on the callback function.
+* The return value of the callback function is passed as the first argument to the next call to the callback, while the current array element is passed as the second argument.
 
 
-  ```js
-    let numbers =[ 2, 5, 20, 9, 3, 5, 7, 100000, 8 , 13]
+```js
+  let numbers = [2, 5, 20, 9, 3, 5, 7, 100000, 8 , 13]
 
-    // arr.reduce()
-    function maxNum ( acc, val) {
-        console.log("ACC::", acc, "Current Val::", val)
-        if(val > acc){
-            acc = val
-        }
-        return acc;
-    }
+  // arr.reduce()
+  function maxNum ( acc, val) {
+      console.log("ACC::", acc, "Current Val::", val)
+      if(val > acc){
+          acc = val
+      }
+      return acc;
+  }
 
-    let biggestNum = numbers.reduce(maxNum)
-    console.log(biggestNum)
+  let biggestNum = numbers.reduce(maxNum)
+  console.log(biggestNum)
 
-    // arr.reduce()
-    let biggestNum = numbers.reduce((acc, val) => {
-        if (val>  acc){
-            console.log(acc, val)
-            acc = val
-        }
-        return acc;
-    }, 0)
+  // arr.reduce()
+  let biggestNum = numbers.reduce((acc, val) => {
+      if (val > acc){
+          console.log(acc, val)
+          acc = val
+      }
+      return acc;
+  }, 0)
 
-    console.log(biggestNum)
-  ```
+  console.log(biggestNum)
+```
 
 
 
