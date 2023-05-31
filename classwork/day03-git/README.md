@@ -1,12 +1,12 @@
 #### Students will be able to:
 - [ ] Explain what Git is
 - [ ] Define Version Control System
-- [ ] make the distinction between centralized VCS and Distributed VCS
+- [ ] Distinguish between centralized VCS and Distributed VCS
 - [ ] Identify Github
-- [ ] make the distinction between `git` and `github`
+- [ ] Distinguish between `git` and `github`
 
 - [ ] Explain terminal/CLI commands
-- [ ] Introduce essential Git commands
+- [ ] Perform essential Git commands
 - [ ] method 1: Start with Github
     - [ ] Show github and walk through the `Github` workflow 
         - [ ] Create a repo
@@ -44,7 +44,7 @@
 git --version
 
 # What is Git?
-Git is a distributed version control system that helps developers to collaborate more efficiently by tracking code changes that have been around since 2005.
+Git is a distributed version control system that helps developers to collaborate more efficiently by tracking code changes. It was originally developed by the creator of Linux, Linus Torvalds, in 2005.
 
 Git is a distributed version control system that is free and open source. It is the most widely used VCS in development today. Most programmers interact with git on a daily basis.
 
@@ -52,11 +52,11 @@ Git is a distributed version control system that is free and open source. It is 
 # What is VCS, Version Control System?
 VCS is a software that helps software engineers to track code changes. 
 
-We first save the initial version of code into Git, then when we make changes, we can save it into Git, then save new changes again into Git.
+We first save the initial version of code into Git, then when we make changes, we can save them into Git, then save new changes again into Git.
 
-This helps us to see what we did when, as well as track down bugs, or if a mistake is made, we can turn back the clock and compare earlier versions of the code. 
+Each of these changes comes with a message, called a commit message, that describes what the change would do for the codebase. This helps us to track and see what we did when as well as who did it. If we decide we want to revert just a particular change, the commit is revertable on its own without affecting changes that came before or after it. Git is a tool that allows us to effectively manage collaborative changes to a large codebase as it grows over time.
 
-ex) google doc vs textEdit
+Think about for example, google docs vs textEdit.
 
 
 # What are two main types of VCS?
@@ -79,7 +79,7 @@ ex) gitLab, BitBucket, SourceForce.
 
 # So how are git and github different ?
 
-
+Git is a CLI and GitHub is a web application.
 
 # Terminal / CLI commands 
 ```
@@ -93,7 +93,7 @@ $mkdir       # MaKe Directory = create new directory
 $open        # open a file with the associated program, a directory with Finder, or a URL with the default web browser
 $ps          # list all running processes
 $kill        # terminate existing process
-$rmd         # permanently delete file
+$rm          # permanently delete file
 $rmdir       # remove directory
 ```
 
@@ -101,14 +101,14 @@ $rmdir       # remove directory
 ## clone 
     `clone` downloads a repository(folder or file with code) that is hosted on github into your local machine.
 ## add
-    `add` tracks your files and changes in Git. 
-    When you makes any changed, we want to tell the git that we made changes and add that changes
+    we `add` can begin tracking on new files or stage changes to tracked files within Git. 
+    When we make a change, we want to tell the git that we made changes and add the files containing those changes to the staging area so we can commit the change.
 ## commit 
-    `save` your file with messages.
+    `save` our changes with a message describing why the change is important.
 ## push
-    `upload` git commits to the github remote repository 
+    `upload` our git commits to the github remote repository 
 ## pull
-    `download` new changes that was made by your collaborator 
+    `download` new changes that were made by your collaborators
 ## git help -a
     This is the real G, the real boss, the final exam, the ultimate cheat sheet.
 
@@ -116,12 +116,12 @@ $rmdir       # remove directory
 # github 
 https://github.com/
 
-You should have your own github account in order to complete the Assignment-0 so 
+You should already have your own github account in order to complete the Assignment-0 so 
 
  ## Github workflow on Github
 
   ### What is a repository?
-     A repository is a project, a collection of code files and folders. Here is an example of my project. Show my swimwear CLI project.
+     A repository is a project, a collection of code files and folders. Here is an example of my project. Show Project Showcase project on GitHub.
 
   ### Steps
    * create a repository
@@ -145,10 +145,10 @@ You should have your own github account in order to complete the Assignment-0 so
    ###### h6 
 
 
- ## Github workflow on the local machine
+ ## Github => local machine
 
-   ### VSC ( not VCS)
-   * with ohmyzsh, it is listed so I recommend you installing it
+   ### VS Code 
+   * with [ohmyzsh](https://ohmyz.sh/), it is listed so I recommend you installing it
    * open folder or `$mkdir <new folder name>`
    * open terminal
    * `$git clone <the repo git url address>`
@@ -163,9 +163,9 @@ You should have your own github account in order to complete the Assignment-0 so
    * `$git push -u origin <branch name>`
    * what is `origin`? It represents the location of our git repository
 
-# Local Git Workflow
+# Local Machine => GitHub
 
- ## steps on vsc
+ ### steps in VS Code
   * `$mkdir <foldername>`
   * `$cd <foldername>`
   * `$touch <filename>`
@@ -176,7 +176,7 @@ You should have your own github account in order to complete the Assignment-0 so
   * `$git push -u origin main` XXX doesn't work FATAL
   *  go to github website and create a repo
   * `$git remote add origin <url>` 
-  * `$git push -u origin <main>` -upstream, default let you just use git push in the future
+  * `$git push -u origin <main>` -upstream, default (lets you use git push in the future to push to origin/main)
   * `$git push`
 
 # Review Github workflow and Local machine git workflow
