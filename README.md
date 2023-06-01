@@ -13,13 +13,13 @@ Slack Workspace: https://ttpatcsi.slack.com/archives/C055296Q6GJ
 
 Lead Instructor: Dakota Martinez
 
-Lead Teaching Assistant: Ahsan Ahmed
+Lead Teaching Assistant: Ahsan Abbasi
 
 Teaching Assistants: Nicky Liu, Jean Luis Urena, Jorge Vasquez
 
-Program Manager: Farzana Ruzehaji
+Program Manager: Sabine Salandy
 
-Career Coach: Omar Duran
+Career Coach: Farzana Ruzehaji
 
 Emails: Dakota.Martinez@csi.cuny.edu, Sabine.Salandy@csi.cuny.edu, Farzana.Ruzehaji@csi.cuny.edu  
 
