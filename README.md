@@ -38,74 +38,74 @@ Daily Schedule (Subject To Change!)
 ## Curriculum Index (Tentative, Subject To Change)
 
 #### Week 1
-- Monday 6/12/23 - Hackerrank assessment unit testing discussion
-- Tuesday 6/13/23 - **Lesson #1** Introduction to HTML/CSS, Bootstrap, Flexbox & Grid
-- Wednesday 6/14/23 - **Lesson #2** Bootstrap, Intro to Git & GitHub
-- Thursday 6/15/23 - **Lesson #3** Intro to JavaScript
-- Friday 6/16/23 - Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule
+- Monday 6/12/23 - **Day 1**: Hackerrank assessment unit testing discussion
+- Tuesday 6/13/23 - **Day 2**: Intro to HTML/CSS, Bootstrap, Flexbox & Grid
+- Wednesday 6/14/23 - **Day 3**: Intro to Git & GitHub
+- Thursday 6/15/23 - **Day 4**: Intro to JavaScript
+- Friday 6/16/23 - **Day 5**: Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule
 
 #### Week 2
 - Monday 6/19/23 - No class (Juneteenth)
-- Tuesday 6/20/23 - **Lesson #4** Using JavaScript for Algorithms
-- Wednesday 6/21/23 - **Lesson #5** Algorithms and Unit Testing
-- Thursday 6/22/23 - **Lesson #6** DOM Manipulation
-- Friday 6/23/23 - Cover Letter and Email Communications
+- Tuesday 6/20/23 - **Day 6**: Using JavaScript for Algorithms & Unit Testing
+- Wednesday 6/21/23 - **Day 7** Cover Letters & Email Communication
+- Thursday 6/22/23 - **Day 8**: DOM Manipulation
+- Friday 6/23/23 - **Day 9**: Intro to React
 
 #### Week 3
-- Monday 6/26/23 - **Lesson #7** Introduction to React
-- Tuesday 6/27/23 - **Lesson #8** Introduction to External API Requests and ReactJS
-- Wednesday 6/28/23 - **Lesson #9** Introduction to External API Requests and ReactJS Cont'd
-- Thursday 6/29/23 - **Lesson #10** React Router and Client-Side Routing in a SPA
-- Friday 6/30/23 - **Lesson #11** Introduction to Technical Interviewing/Cyclic Sort/ Fast _ Slow Pointers
+- Monday 6/26/23 - **Day 10**: React - State & Events
+- Tuesday 6/27/23 - **Day 11**: React - Forms & Lifting State
+- Wednesday 6/28/23 - **Day 12**: React - Side Effects & Data Fetching (Create & Read)
+- Thursday 6/29/23 - **Day 13** React Router and Client-Side Routing in a SPA
+- Friday 6/30/23 - **Day 14**: Introduction to Technical Interviewing/Cyclic Sort/ Fast _ Slow Pointers
 
 #### Week 4
-- Monday 7/3/23 - No class
+- Monday 7/3/23 - **Day 15**: React - Update & Delete
 - Tuesday 7/4/23 - No class
-- Wednesday 7/5/23 - **Lesson #12** State Management with Redux and React-Redux
-- Thursday 7/6/23 - **Lesson #13** Introduction to NodeJS + ExpressJS Pt 1
-- Friday 7/7/23 - **Lesson #14** Merge Intervals/ Reverse Linked List In Place
+- Wednesday 7/5/23 - **Day 16**: React State Management - Extracting State Logic into Reducers
+- Thursday 7/6/23 - **Day 17**: Introduction to NodeJS + Express - Requests & Routing
+- Friday 7/7/23 - **Day 18:**: Merge Intervals/ Reverse Linked List In Place
 
 #### Week 5
-- Monday 7/10/23 - **Lesson #15** Introduction to NodeJS + ExpressJS Pt 2
-- Tuesday 7/11/23 - **Lesson #16** CRUD App I
-- Wednesday 7/12/23 - **Lesson #17** CRUD App II
-- Thursday 7/13/23 Behavioral Interviewing/ Team & Technical Project Building
-- Friday 7/14/23 - **Lesson #18** CRUD App III
+- Monday 7/10/23 - **Day 19**: NodeJS + Express - PostgreSQL & Database Reads
+- Tuesday 7/11/23 - **Day 20**: NodeJS + Express - ORMs & Full CRUD
+- Wednesday 7/12/23 - **Day 21**: NodeJS + Express - Authentication
+- Thursday 7/13/23 - **Day 22**: NodeJS + Express - Authorization & Access Control
+- Friday 7/14/23 - **Day 23**: Behavioral Interviewing/ Team & Technical Project Building
 
 #### Week 6
-- Monday 7/17/23 - **Lesson #19** Setting up a server on AWS I
-- Tuesday 7/18/23 - **Lesson #20** Setting up a server on AWS II
-- Wednesday 7/19/23 - **Lesson #21** Setting up a server on AWS III
-- Thursday 7/20/23 - Capstone project I
-- Friday 7/21/23 - **Lesson #22** Trees DFS/ Two Pointers
+- Monday 7/17/23 - **Day 24**: Setting up an EC2 Instance on AWS
+- Tuesday 7/18/23 - **Day 25**: AWS - Configuring a Database
+- Wednesday 7/19/23 - **Day 26**: Deploying an Application
+- Thursday 7/20/23 - **Day 27**: Capstone Planning
+- Friday 7/21/23 - **Day 28**: Trees - Depth First Search & Two Pointers
 
 #### Week 7
-- Monday 7/24/23 - **Lesson #23** Capstone Project II- React JS and/or Remix JS
-- Tuesday 7/25/23 - Capstone Project III
-- Wednesday 7/26/23 - Capstone Project IV
-- Thursday 7/27/23 - Capstone Project (first iteration staff takes lead)
-- Friday 7/28/23 - **Lesson #24** Sliding Window/ Trees BFS
+- Monday 7/24/23 - **Day 29**: Capstone Project - Session 2
+- Tuesday 7/25/23 - **Day 30**: Capstone Project -  Session 3
+- Wednesday 7/26/23 - **Day 31**: Capstone Project -  Session 4
+- Thursday 7/27/23 - **Day 32**: Capstone Project (first iteration staff takes lead)
+- Friday 7/28/23 - **Day 33**: Sliding Window & Trees Breadth First Search
 
 #### Week 8
-- Monday 7/31/23 - Capstone Project V
-- Tuesday 8/1/23 - Capstone Project VI
-- Wednesday 8/2/23 - Capstone Project VII
-- Thursday 8/3/23 - Mock Behavioral Interviews
-- Friday 8/4/23 - Capstone Project VIII
+- Monday 7/31/23 - **Day 34**: Capstone Project -  Session 5
+- Tuesday 8/1/23 - **Day 35**: Capstone Project -  Session 6
+- Wednesday 8/2/23 - **Day 36**: Capstone Project -  Session 7
+- Thursday 8/3/23 - **Day 37**: Mock Behavioral Interviews
+- Friday 8/4/23 - **Day 38**: Capstone Project -  Session 8
 
 #### Week 9
-- Monday 8/7/23 - Mock Technical Interviews
-- Tuesday 8/8/23 - Capstone Project (2nd iteration staff takes lead)
-- Wednesday 8/9/23 - Capstone Project IX
-- Thursday 8/10/23 - Capstone Project X
-- Friday 8/11/23 - Capstone Project XI
+- Monday 8/7/23 - **Day 39**: Mock Technical Interviews
+- Tuesday 8/8/23 - **Day 40**: Capstone Project (2nd iteration staff takes lead)
+- Wednesday 8/9/23 - **Day 41**: Capstone Project -  Session 9
+- Thursday 8/10/23 - **Day 42**: Capstone Project -  Session 10
+- Friday 8/11/23 - **Day 43**: Capstone Project -  Session 11
 
 #### Week 10
-- Monday 8/14/23 - Capstone Project XII
-- Tuesday 8/15/23 - Capstone Project 3rd Iteration
-- Wednesday 8/16/23 - Career Search Framework & Ongoing Program Expectations (Farzana)
-- Thursday 8/17/23 - Final Capstone Presentations
-- Friday 8/18/23 - Hackerrank Assessment/End Pre-internship course
+- Monday 8/14/23 - **Day 44**: Capstone Project -  Session 12
+- Tuesday 8/15/23 - **Day 45**: Capstone Project 3rd Iteration
+- Wednesday 8/16/23 - **Day 46**: Career Search Framework & Ongoing Program Expectations (Farzana)
+- Thursday 8/17/23 - **Day 47**: Final Capstone Presentations
+- Friday 8/18/23 - **Day 48**: Hackerrank Assessment/End Pre-internship course
 
 ---
 
