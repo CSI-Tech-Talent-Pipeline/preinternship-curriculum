@@ -275,7 +275,7 @@ typeof NaN //'number'
     ```
 
 
-### Higher-Order Function
+### Higher-Order Functions
   * A Higher-Order Function is any function that operates on any other function(s), either by taking them in as arguments or returning one.
   
   * In JavaScript, this is facilitated by the fact that functions are [First-Class objects](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function).
@@ -289,7 +289,7 @@ typeof NaN //'number'
   * In the above example, the Higher-Order function is the outerFunc function because it takes in a callback (cb) and returns the invocation of the callback inside of it.
 
 
-### Callback Function
+### Callback Functions
 
   * A callback function is any function that is passed into another function as an argument, which is then invoked inside of the outer function to complete some kind of routine or action.
 
