@@ -41,7 +41,7 @@ By the end of this lesson, students will be able to:
   - an `<img>` tag with a class of `j-desc__company-image`
   - an `<h2>` tag with a class of `j-desc__job-title`
   - a `<p>` tag with a class of `j-desc__company`
-  - a `<ul>` tag with a class of `j-desc__details` 3 `<li>` tags as children:
+  - a `<ul>` tag with a class of `j-desc__metadata` 3 `<li>` tags as children:
     - first should have a class of `j-desc__location`
     - next: `j-desc__salary`
     - then: `j-desc__posting_date`
@@ -114,6 +114,7 @@ By the end of this lesson, students will be able to:
 4. Position the grid itself.
 5. Control the size of rows and columns.
 6. Customizing the positioning of individual items within their grid cell.
+7. Responsive design
 
 #### 1. Understand CSS Grid Basic Layout and terminology
 
@@ -419,6 +420,39 @@ Use `align-self` to position the content within the block axis (normally up and 
 }
 ```
 
+#### 7. Responsive Design
+
+Now, let's say you want to configure your grid so that you have a different layout on mobile, tablet, and desktop size screens. There are different ways to approach this problem, but most of them involve media queries that apply different styles based on the screen size.
+
+```css
+.container {
+  border: 6px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 15px 10px;
+  place-content: center space-between;
+}
+/* ... */
+.item-9 {
+  background-color: #aad041;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+@media screen and (min-width: 30em) {
+  .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: 400px;
+    gap: 30px 20px;
+  }
+  .item-9 {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+  }
+}
+```
+
 ## CSS Flexbox
 
 ### Task List:
@@ -433,13 +467,25 @@ Use `align-self` to position the content within the block axis (normally up and 
 - Flexbox containers only manage content flow in a single direction, however, which is inline by default (left to right)
 - We can set a flexbox container to wrap and then items that don't fit into the container will wrap to the next line.
 - To apply flexbox to a container, give it the display property of `flex`
+- Flexbox makes it easier to position elements logically within your page layout.
 
+Terminology table:
 
+| Term | Definition |
+|---|---|
+| Flex container | The container element with `display: flex` applied |
+| Flex items | The direct child elements of the flex container |
+| Main axis | The axis corresponding to the flex-direction (left to right by default) |
+| Cross axis | The axis perpendicular to the flex-direction (up to down by default) |
+| Main start | The start of the main axis (left by default) |
+| Main end | The end of the main axis (right by default) |
+| Cross start | The start of the cross axis (top by default) |
+| Cross end | The end of the cross axis (bottom by default) |
 
 
 #### 2. Create a flex container
 
-- Take one of the `<div class="j-desc>`s we added earlier and add `display: flex` to its CSS selector
+- Take the `<div class="j-desc>` elements we added earlier and make them flex containers by adding `display: flex` to their CSS selector
 
 ```css
 .j-desc {
@@ -451,22 +497,62 @@ Notice now that the content is flowing left to right instead of top to bottom li
 
 **IMPORTANT CONCEPT** Both Grid and Flex containers affect the display of *direct* children only. So, if we want to remove the affects of flex on certain children, we can wrap them in another element.
 
-This is better, but you may notice that the `<span>` tags are all still displayed inline instead of stacked on top of one another. To fix this, we can create a flex container to wrap the span tags and set the `flex-direction` property to `column`.
+```html
+<div class="j-desc">
+  <img
+    class="j-desc__company-image"
+    src="https://media.licdn.com/dms/image/C560BAQFRJm8faxGylA/company-logo_100_100/0/1678742239224?e=1693440000&v=beta&t=3qoM-csXeIsnQbpcIe_x7I2SzmFLolDm4_jbH-CCauw"
+    alt="Patterned Learning AI"
+  />
+  <div class="j-desc__details">
+    <h2 class="j-desc__job-title">Junior Front-End Developer</h2>
+    <p class="j-desc__company">Patterned Learning AI</p>
+    <ul class="j-desc__metadata">
+      <li class="j-desc__location">San Francisco, CA</li>
+      <li class="j-desc__salary">$100k/yr - $120k/yr</li>
+      <li class="j-desc__posting_date">6 days ago</li>
+    </ul>
+  </div>
+</div>
+```
+
+#### 3. Control the Direction, Wrapping, and Alignment
+
+- Just as with CSS Grid, we can use the `justify-content/items` and `align-content/items` and `place-content/items` properties to position both where items are placed within the flex container (using `content`) and where the contents of items are placed within their box (using `items`).
+- If we want a normal layout as we're used to with content, where items appear from left to right and then continue on the next line, we can set `flex-wrap: wrap`.
+- We can also use the `gap` property to set spacing between flex items just as we would with grid items: `gap: <row-gap> <col-gap>`
 
 ```css
-.flex-col {
+.j-desc {
   display: flex;
-  flex-direction: column;
+  place-items: start;
+  place-content: start;
+  gap: 20px;
 }
 ```
 
-### How to Implement:
+Let's also try this out with the example elements from the grid above:
 
-[Details about each step]
+```css
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  place-content: center;
+  gap: 20px;
+}
+```
 
-### Validation:
+And now, replace the class of `container` with `flex-container` so we can see the difference.
 
-[How to verify that the steps have been implemented correctly]
+Notice that the flex items are butted up against the content above, you can add margin to the flex container to space the container with respect to other elements on the page:
+
+```css
+.flex-container {
+  margin: 2em auto;
+  /* ... */
+}
+```
 
 ## Bootstrap
 
@@ -477,17 +563,138 @@ This is better, but you may notice that the `<span>` tags are all still displaye
 3. Include the Bootstrap library in your project.
 4. Use Bootstrap's predefined classes to create a responsive design.
 
-### How to Implement:
 
-[Details about each step]
+#### 1. Understand what a CSS Framework is
 
-### Validation:
+CSS Frameworks like Bootstrap consist of a collection of CSS classes that work together to build out the styles for common user interface components. They also tend to include utility classes designed to solve challenges inherent in some design situations.
 
-[How to verify that the steps have been implemented correctly]
+Here are some examples of components:
+- Accordion
+- Alert
+- Button
+- Carousel 
+- Dropdown
+- Modal
+- Navbar
+- Pagination
+- Popovers
+- Progress
+- Spinners
+- Toasts
+- Tootips
 
+#### 2. Understand the benefits of using Bootstrap
+
+The idea with a CSS framework is that a bunch of predefined CSS selectors will apply the styles necessary to build these UI components, and you will provide your own HTML markup and content that follows the patterns established in the framework's documentation. This makes it very quick to put together a functional and professional UI without needing to do all of the leg work manually. It also means that you don't necessarily have to understand everything that Bootstrap is doing with CSS in order to use it effectively to build a website. Essentially, it is easy to build a UI that looks the way that the framework intends, and customization can be a bit more difficult if the provided styles are not to your taste. Other CSS frameworks that take a similar approach to Bootstrap are [Foundation](https://get.foundation/), [Semantic UI](https://semantic-ui.com/) and [Materialize](https://materializecss.com/). 
+
+Websites built with these frameworks are often familiar or recognizable because they can be difficult to customize and not everyone does. Once you use Bootstrap, you'll start to notice a bunch of other websites that you've visited that look familiar. You'll find that they use Bootstrap as well.
+
+Other CSS frameworks take a more utility focused approach rather than focusing on components. For these, the provided CSS classes only do a single task, like apply a certain amount of padding to an element. It is much easier to customize your website design using a utility based framework, because you'll be doing the work to style your site yourself. For this, you'll need to understand the CSS properties and how they work together.
+
+Examples of Utility based frameworks include: 
+
+- [TailwindCSS](https://tailwindcss.com/) (most popular)
+- [Tachyons](https://tachyons.io/)
+- [BassCSS](https://basscss.com/)
+
+
+#### 3. Including the Bootstrap library in your project
+
+Create a new file called `bootstrap.html` and use the `!` snippet to create an html skeleton.
+
+After that, find the [CDN links to bootstrap's source code](https://getbootstrap.com/docs/5.3/getting-started/download/) and add them to the head of the new html document. They look like the code below, but use the ones from the documentation as they will be the most up to date.
+
+```html
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+```
+
+You'll want to add a `defer` keyword to the `<script>` tag so that it doesn't block the webpage from loading. As an alternative, you can also use the [starter code example on the twitter bootstrap examples repo](https://raw.githubusercontent.com/twbs/examples/main/starter/index.html)/
+
+
+#### 4. Use Bootstrap's predefined classes to create a responsive design
+
+To see how Bootstrap can work for us, let's try reading through the documentation for some components:
+
+- [Accordion](https://getbootstrap.com/docs/5.3/components/accordion/)
+- [Buttons](https://getbootstrap.com/docs/5.3/components/buttons/)
+- [Navbar](https://getbootstrap.com/docs/5.3/components/navbar/)
+- [Card](https://getbootstrap.com/docs/5.3/components/card/)
+- [Carousel](https://getbootstrap.com/docs/5.3/components/carousel/)
+
+For each, try copying the code from one of the examples in the document into your `bootstrap.html` file and checking it out in the browser.
+
+Note that when the above examples include image files, the `src` attributes will need to be replaced with your own image sources. Try a site like [unsplash.com](https://unsplash.com/) to get free high resolution images. 
+
+```html
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="..." />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+```
+
+Say you had this code from the example, you'd want to fill in the image sources so that the carousel works as intended. 
+
+### The Influence of Utility-first frameworks
+
+One of the reasons that utility first frameworks have become so much more popular over the last few years is that they've offered a better developer experience when it comes to customizations, while also solving some problems with bigger frameworks like Bootstrap. 
+
+One key problem that Bootstrap used to have, was that something as simple as customizing the spacing between elements (if it was not already to your liking) still required custom css. This meant that there were many declarations applying margin or padding and keeping the spacing can be difficult, especially in a larger codebase with many collaborators.
+
+Utility frameworks have many built in classes whose sole purpose is to give you the ability to apply a consistent amount of margin or padding to any element you like. For example:
+
+```css
+.mt-0 {
+  margin-top: 0;
+}
+.m-0 {
+  margin: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+```
+
+Newer versions of Bootstrap have incorporated some of these utility classes for applying small amount of margin or padding to elements, making it a bit easier to solve some spacing issues without requiring custom CSS.
+
+**Important Tip**: 
+- When using a CSS library, I find it very useful to pull up a CDN link in a browser tab, you can then search for any class name you want to see what it does.
+
+[Boostrap CSS on jsDeliver CDN](https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css)
+
+This can also be really helpful to identify the situation where a utility class you're trying to use is actually there! I tried to use `mt-8` and discovered after checking out the source code that it's not included in the CDN. 😱
 
 ## Resources
 
 - [Interactive box-model Demo](https://codepen.io/psande/full/nKOJyX)
 - [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - [CSS Grid Crash Course](https://www.youtube.com/watch?v=p4Ith5qRM1g)
+- [CSS Flexbox Crash Course](https://www.youtube.com/watch?v=z62f2k38s64)
+- [Unsplash.com](https://unsplash.com/)
