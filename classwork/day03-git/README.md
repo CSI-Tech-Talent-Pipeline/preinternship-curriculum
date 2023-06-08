@@ -127,7 +127,7 @@ You should already have your own github account in order to complete the Assignm
    * create a repository
    * create a README.md
    * what is md? markdown, a text file
-   * why is README important?
+   * why is a README important?
    * README.md is default file that always shows on the repo under the files 
    * How to edit online ?
    * show the commits by clicking history
