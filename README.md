@@ -172,6 +172,18 @@ No code for the day
 
 **Day 6: Using JavaScript for Algorithms & Unit Testing (06/20/23)**
 
+Resources:
+- [Introduction to Algorithms](https://www.geeksforgeeks.org/introduction-to-algorithms/)
+- [Basics of Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/a/why-we-write-functions)
+- [Algorithms in JavaScript](https://javascript.info/algorithm)
+- [Algorithmic Problem Solving In JavaScript](https://www.smashingmagazine.com/2018/11/guide-painless-javascript-algorithms-data-structures/)
+- [Introduction to Unit Testing](https://www.guru99.com/unit-testing-guide.html)
+- [Jest - Getting Started](https://jestjs.io/docs/getting-started)
+- [JavaScript Unit Testing with Jest](https://www.digitalocean.com/community/tutorials/how-to-test-react-components-in-javascript)
+- [Jest Tutorial: what is Jest?](https://www.valentinog.com/blog/jest/)
+
+
+
 **Day 7 Cover Letters & Email Communication (06/21/23)**
 
 No code for the day
@@ -202,10 +214,14 @@ Slides:
 - [DOM Events Slides](https://raw.githack.com/learn-co-curriculum/SENG-LIVE-013023-Phase-1-JS/main/03_DOM_Events/assets/export/index.html)
 
 
-
-
-
 **Day 9: Intro to React (06/23/23)**
+
+Suggested Pre-reading:
+- [React: Quick Start](https://react.dev/learn)
+- [React: Developer Tools](https://react.dev/learn/react-developer-tools)
+- [React: Describing the UI](https://react.dev/learn/describing-the-ui)
+- [React: Your First Component](https://react.dev/learn/your-first-component)
+- [React: Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
 
 **Day 10: React - State & Events (06/26/23)**
 
