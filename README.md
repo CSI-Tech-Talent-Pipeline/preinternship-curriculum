@@ -68,8 +68,8 @@ Daily Schedule (Subject To Change!)
 #### Week 5
 - Monday 7/10/23 - **Day 19**: NodeJS + Express - PostgreSQL & Database Reads
 - Tuesday 7/11/23 - **Day 20**: NodeJS + Express - ORMs & Full CRUD
-- Wednesday 7/12/23 - **Day 21**: NodeJS + Express - Authentication
-- Thursday 7/13/23 - **Day 22**: NodeJS + Express - Authorization & Access Control
+- Wednesday 7/12/23 - **Day 21**: NodeJS + Express - 
+- Thursday 7/13/23 - **Day 22**: NodeJS + Express - Authentication, Authorization & Access Control
 - Friday 7/14/23 - **Day 23**: Behavioral Interviewing/ Team & Technical Project Building
 
 #### Week 6
@@ -126,6 +126,10 @@ Daily Schedule (Subject To Change!)
 
 **Day 2: Introduction to HTML/CSS, Bootstrap, Flexbox & Grid (06/13/23)**
 
+- [Interactive box-model Demo](https://codepen.io/psande/full/nKOJyX)
+- [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- [CSS Grid Crash Course](https://www.youtube.com/watch?v=p4Ith5qRM1g)
+- [CSS Flexbox Crash Course](https://www.youtube.com/watch?v=z62f2k38s64)
 - [Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page)
 
 **Day 3: Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
