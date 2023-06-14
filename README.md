@@ -124,22 +124,23 @@ Daily Schedule (Subject To Change!)
 
 - [Blackboard/ Onboarding](https://bbhosted.cuny.edu/webapps/blackboard/content/listContent.jsp?content_id=_75836936_1&course_id=_2267876_1&mode=reset)
 
-**Day 2: Introduction to HTML/CSS, Bootstrap, Flexbox & Grid (06/13/23)**
-
+**Day 2: [Introduction to HTML/CSS, Bootstrap, Flexbox & Grid (06/13/23)](./day02-intro-to-html/README.md)**
+### Resources
 - [Interactive box-model Demo](https://codepen.io/psande/full/nKOJyX)
 - [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - [CSS Grid Crash Course](https://www.youtube.com/watch?v=p4Ith5qRM1g)
 - [CSS Flexbox Crash Course](https://www.youtube.com/watch?v=z62f2k38s64)
 - [Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page)
 
-**Day 3: Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
 
+
+**Day 3: [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md), Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
+
+- [Make a Good README](https://www.makeareadme.com/)
+- [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md)
 - [Writing good commit messages](https://medium.com/compass-true-north/writing-good-commit-messages-fc33af9d6321)
-
 - [Advanced Git Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows)
-
 - [Git and GitHub Slides - Part I](https://docs.google.com/presentation/d/12tgnThkuKGHpbxZEv2RTWOTLpViL1O3hcHEGNJv9Wzo/edit?usp=sharing)
-
 - [Git and GitHub Slides - Part II](https://docs.google.com/presentation/d/1Qkz1Z83P2b2EUFDrMN8L1X7BcMwZzzkSqCKCI8INH78/edit?usp=sharing)
 
 **Day 4: Intro to JavaScript (06/15/23)**
