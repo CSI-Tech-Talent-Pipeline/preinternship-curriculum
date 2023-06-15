@@ -1,431 +1,548 @@
-## SWBAT  [Students Will Be Able To]
-- [ ] Briefly explain the history of JS
-- [ ] Understand the role of JS in web development
-- [ ] Explain the relationship between HTML and JS
-- [ ] Use script tags to load JS into an HTML page
-- [ ] Explain the basic data types and data structures in JS
-  - [ ] primitive datatype (Undefined, Null, Boolean, Number, String, Symbol)
-  - [ ] non primitive datatype (object, array, function)
-- [ ] Explain the difference between pass-by-value and pass-by-reference
-- [ ] understand the destructuring assignment `const { description } = req.body`
-- [ ] Understand higher order function and callback function
-- [ ] Utilize callback function in array methods like `.forEach()`, `.map()`, and `.reduce()`
+# Intro to JavaScript
 
-### History of JavaScript
-* Early Days
-  * Created by Brandon Eich at Netscape in 10 days in 1995
-  * Many say it was marketing tactic to divert some attention from Java, which was the most buzzed-about language at the time
-  * A (traditionally) client-side scripting language
-  * Meant (traditionally) to run entirely on the user’s browser
-  * HTML, CSS, JS 
-  * The standard for JavaScript implementations is called ECMAScript
-  * Given that there are several **competing** JavaScript engines, the [European Computer Manufacturers Association (ECMA)](https://en.wikipedia.org/wiki/Ecma_International) is responsible for standardizing JavaScript, referred to as [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
-  * The standard is updated yearly and the standard for that year is called ECMAScript 20xx (or ES 20xx); ES2015 or ES6 (ES version 6
+## Students Will Be Able To (SWBAT):
 
-### Role of JavaScript
-  * In the context of web browsers, JS allows you to interact with the DOM (Document Object Model), so you can do things like:
-  * Show and hide elements
-  * Animate elements
-  * Replace elements with other elements
-  * Make requests to the server without reloading the page
-  * The DOM is a programmatic representation of all of the HTML elements on the web page.
+- Understand and explain the basic syntax and features of JavaScript.
+- Execute manual testing of JavaScript code via console or browser.
+- Write, execute, and debug simple JavaScript programs.
+- Differentiate between different data types in JavaScript (numbers, strings, booleans, arrays, objects), and apply destructuring assignment.
+- Use conditionals (if, else, switch) and loops (for, while) to control program flow.
+- Define and call functions with arguments.
+- Understand the concept of scope in JavaScript.
+- Utilize arrays, understand array methods, and implement callbacks in JavaScript.
 
-* Load JavaScript
-  * JavaScript can be written directly in HTML through a `script` tag
-  * It can also be loaded externally through a `script` tag with a `src` attribute
-  * When the browser sees JavaScript, it attempts to run it immediately
+## Agenda:
 
-### JavaScript Data Types Overview
- * Primitive data types 
-    1. Symbol
-    2. Undefined
-    3. Null
-    4. Boolean
-    5. Number
-    6. String
+1. **Introduction to JavaScript**
 
- * Non-Primitive types, object  
-    1. { key : value }
-    2. [ array ]
-    3. function (){}
+   - Brief history and purpose of JavaScript.
+   - Comparison with C++ and overview of differences.
 
-Primitive types are unique, distinct and can't be modified, whereas non-primitive or reference types can be mutated.
+2. **Manual Testing**
+
+   - How to verify JavaScript code in console or browser.
+   - Implementing manual testing at each step.
+
+3. **Basic Syntax and Features**
+
+   - Variables, constants, and data types.
+   - Operators, expressions, and destructuring assignment.
+   - Console logging and alerts.
+
+4. **Control Structures**
+
+   - Conditionals: if, else, switch.
+   - Loops: for, while.
+
+5. **Functions and Scope**
+
+   - Defining and calling functions.
+   - Understanding scope in JavaScript.
+
+6. **Arrays, Array Methods, and Callbacks**
+   - Understanding arrays in JavaScript.
+   - Common array methods and introduction to callbacks.
+
+Each of these sections will be explored through practical examples.
+
+# Section 1 Intro to JavaScript
+
+### The Birth of JavaScript
+
+#### Why JavaScript?
+
+In the early days of the web, HTML and CSS were used for structuring and styling content, but they fell short when it came to creating interactive, dynamic experiences for users. Enter JavaScript, a scripting language created by Brendan Eich in 1995 while he was an engineer at Netscape.
+
+JavaScript was designed to make web pages alive. It could respond to user actions, such as clicks or key presses, manipulate the Document Object Model (DOM), and communicate asynchronously with the server, leading to the development of Single Page Applications (SPAs) and AJAX.
+
+#### The Evolution of JavaScript
+
+JavaScript has grown significantly since its inception. Its first version, ECMAScript 1, was standardized in 1997. Major updates have included ECMAScript 5 (ES5) in 2009, which introduced strict mode and JSON support, and ECMAScript 2015 (ES6), which added classes, modules, arrow functions, promises, and much more. Today's JavaScript, ECMAScript 2020 (ES11), includes optional chaining, nullish coalescing, and private class fields, among other features.
+
+### JavaScript vs. C++
+
+#### JavaScript and C++: Spot the Differences
+
+JavaScript and C++ differ in many ways. Here are a few key differences:
+
+- **Typing**: JavaScript is dynamically typed, meaning a variable's type is checked at runtime. C++ is statically typed and requires type declaration at compile time.
+- **Memory Management**: In JavaScript, memory management is automatic through a process called garbage collection. In C++, developers have direct control over memory management.
+- **Object-Oriented Programming (OOP)**: JavaScript uses prototype-based inheritance, while C++ uses class-based inheritance. _For now_: this means when you look up Array methods in the JavaScript documentation on MDN, they'll look like this `Array.protoype.forEach()`
+
+#### JavaScript and C++: Spot the Similarities
+
+Despite their differences, JavaScript and C++ share some similarities. Both support object-oriented programming, have similar syntax for basic control structures (like if, for, while), and use similar operators. Your knowledge of these structures and operators in C++ will definitely come in handy when learning JavaScript.
+
+### The Role of JavaScript Today
+
+#### JavaScript in the Wild
+
+Today, JavaScript is used in many different environments, not just in the browser. While client-side JavaScript enables interactivity in the browser, server-side JavaScript (like Node.js) allows developers to build the backend of web applications. You'll even find JavaScript in game development, robotics, and more!
+
+#### Why Full-Stack Developers Need JavaScript
+
+JavaScript is essential for full-stack developers because it's the only language natively supported by all web browsers. This means you can write both the frontend and backend of a web application using just one language. JavaScript, combined with HTML and CSS, forms the cornerstone of web development, enabling you to build powerful, interactive web applications.
+
+# Section 2: Manual Testing
+
+In this section, we'll cover the importance of manual testing in development and the basic steps to manually test JavaScript code. We'll be working with an array of job objects, which we'll use to practice inspecting and manipulating data. Manual testing is a crucial part of your toolkit as a JavaScript developer. Next week, we will be introducing automated testing which also plays an important role in the SDLC (Software Development Lifecycle).
+
+In this section, we will:
+
+- Understand the role and significance of manual testing in development.
+- Perform basic manual testing in the JavaScript console.
+- Verify and test code changes using the browser's JavaScript console.
+
+1.  **Understanding Manual Testing**
+
+    - Why do we manually test code?
+    - What's the role of manual testing in the development lifecycle?
+
+2.  **Performing Manual Testing**
+
+    - How to access and use the browser's JavaScript console for testing.
+    - Practical examples using the `jobs` data structure.
+
+## Understanding Manual Testing
+
+### The Importance of Manual Testing
+
+Manual testing is an essential part of software development. Before automated testing tools were prevalent, developers heavily relied on manual testing to catch bugs and validate that the code is working as expected.
+
+Imagine you are writing a function to filter out jobs in our list that offer remote opportunities. Before you run any automated tests or even implement this function in your application, you want to ensure it works. That's where manual testing comes in. By invoking your function with the `jobs` array and checking the output, you can confirm whether your function works correctly.
+
+### Manual Testing in the Development Lifecycle
+
+Manual testing is prevalent at every stage of the development lifecycle. When writing code, developers often use manual testing to verify their changes before moving onto automated testing. During code reviews, manual tests can validate changes. Even after deployment, manual testing can be useful for troubleshooting issues in the production environment.
+
+## Performing Manual Testing
+
+### Console Commandos: Your Manual Testing Toolkit
+
+The browser's JavaScript console is a powerful tool for manual testing. The `console.log()` function is probably the most commonly used for printing out variable values and function outputs. However, there are more tools at our disposal:
+
+- `console.error()`: Outputs an error message to the console.
+- `console.table()`: Displays tabular data as a table, which can be extremely helpful when working with arrays of objects like our `jobs` list.
+
+Open up your browser's developer tools (you can usually do this with F12 or Ctrl+Shift+I / Cmd+Option+I), navigate to the console, and let's test these out with our `jobs` array.
 
 ```js
-let a = 1;
-let b = 1;
-a += 1;
-console.log(a === b); // false
+console.log(jobs);
 ```
 
 ```js
-a = {};
-b = a;
-a['key'] = 'value';
-console.log(a === b) // true
+console.table(jobs);
 ```
 
-### Primitive Data Type
-* Undefined
-  * A variable that is declared but not assigned a value
+### Getting Hands-On with Manual Testing
 
-    ```js
-    let someVar
-    console.log(someVar) // => undefined
-    ```
-
-* Null
-  * An assignment value that represents nothing.
-
-    ```js
-    let someVar = null
-    console.log(someVar) // => null
-    ```
-
-* Boolean
-  * 6 Falsey values
-    * False: `false`
-    * Zero: `0`
-    * Empty string: `""`
-    * Null: `null`
-    * Undefined: `undefined`
-    * Not a number: `NaN`
-
-  * Truthy values 
-  (everything else)
-
-* Number
-  * Negative `-1`
-  * Exponent `-1e2`
-  * Float `-1.1e2`
-  * NaN `'hello' * 3`
-  * parseInt / parseFloat
-
-      ```js
-      parseInt('123')             // => 123
-      parseInt('123.456')         // => 123
-      parseFloat('123.456')       // => 123.456
-      parseInt('one two three')   // => NaN
-      ```
-
-* Symbol
-  * Only used as somewhat private, unique identifiers for object properties, i.e. object keys. (Don't worry much about these.)
-
-    ```js
-    let sym = Symbol()
-    console.log(sym) // => Symbol()
-    ```
-
-* String
-  * `'I'm a string in single quotes'`
-  * `"I'm a string in double quotes"`
-  * `` `I'm a string template with backticks and interpolation ${'Yay!'}` ``
-  * string interpolation `` backticks 
-
-### Primitives Data Type
-**Pass-by-Value**
-When you declare a variable and pass it to a function, the value of the variable is passed, the variable cannot be reassigned within the function.
-
-**IMPORTANT NOTE:** If you pass a variable pointing to a non-primitive type into a function, like an object, then the value passed is a reference to that object, not a copy of the object. So, if you modify the object by changing its properties within the function, the variable in the outer scope will still refer to the same **now modified** object. This will be an important consideration when we work with React later on in the course.
-
-![toilet-paper-undefined-null](https://i.imgur.com/aorgaMH.png)
-
-
-
-### Non-Primitives Data Type
-* Array
-    * Arrays can contain any data type. 
-
-    ```js
-    let arr = [1, 2, 3, "a", "b", "c", { hello: 'world' }]  
-
-    arr.indexOf("a")
-
-    for(let i = 0; i < arr.length; i++){
-      console.log(arr[i])
-    }
-    ```
-    In practice, it's best to store the same type.
-
-
-* Object
-  * A loaded word in JavaScript. Basically everything that's not a primitive is an object. Objects describe key-value pairs, like hashes in Ruby. They also describe arrays, functions, prototypes, and other complex data types.
-
-  * Object literals
-    * Also known as plain-old JavaScript objects (POJOs), these are really simple key-value pairs. The keys are strings (or Symbols), and the values are any data type, including other objects.
-
-      ```js
-      const fred = { name: 'Fred', age: 26 }
-      const jone = { name: 'Jone' }
-      const school = {
-        students: [fred, jone]
-      }
-      ```
-    * You access properties of objects in one of two ways: dot-notation or bracket-notation. With the brackets, the value that is passed in needs to evaluate to a String or a Symbol.
-
-      ```js
-      const fred = { name: 'Fred', age: 26 }
-      const jone = { name: 'Jone' }
-      const nameKey = 'name'
-      console.log(`${fred.name} is ${fred.age}`) // => "Fred is 26"
-      console.log(`My friend's name is ${jone[nameKey]}`) // => "My friend's name is Jone"
-      ```
-
-    * destructuring assignment
-      ```js
-        const obj = {firstName: ‘Jon’, favColor: ‘blue’}
-        const {firstName, favColor} = obj
-        console.log(firstName,favColor) // ‘Jon’, ‘blue'
-      ```
-
-* Function
-  * Definition VS invocation. **THIS IS SUPER IMPORTANT**
-
-    ```js
-    function functionName() {
-      console.log('Pancake technology is truly incredible. What a time to be alive!')
-    }
-
-    functionName
-
-    // VS
-    functionName()
-    ```
-
-  * Another point to note is that _functions always return undefined unless explicitly returning otherwise_. **PLEASE BURN THIS INTO YOUR MEMORY**. There is only one case of implicit returns in JavaScript and that's with one-line arrow functions without braces (more on that later).
-
-  * Function declaration
-    * This is simply a variable assignment and a function expression mashed into one. It ALWAYS begins with the `function` keyword and needs a name.
-
-      ```js
-      function doSomething() {
-        return true
-      }
-
-      console.log(doSomething) // f doSomething()
-      ```
-
-### Non-Primitives Data Type
-**Pass-by-value**: when you declare a variable and pass it to a function, the value of the object in memory itself is passed, not a copy of the object, and not the variable itself. If the object is mutated within the function, then the variable will continue to refer to that same (mutated) object.
-
-
-
-
-
-### Type Checking
-The original way of checking types, [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof), is a little unreliable when looking at some objects like arrays, which return "object". This works best for primitive values. For example:
+Manual testing often involves manipulating your data and checking whether the output aligns with your expectations. Let's say we want to access the `title` of the first job in our array:
 
 ```js
-typeof 2 //‘number’ 
-
-typeof ‘Jon’ //‘string’
-
-parseInt('DUCK') //NaN
-
-typeof parseInt('DUCK') //'number'
-
-typeof NaN //'number'
+console.log(jobs[0].title);
 ```
 
-![wut](https://media.giphy.com/media/IQ47VvDzlzx9S/giphy.gif)
+You should see "Ruby on Rails Engineer" printed out in the console. Congratulations, you just performed a manual test!
 
+Now, let's print out the titles of all jobs using a loop:
 
+```js
+for (let i = 0; i < jobs.length; i++) {
+  console.log(jobs[i].title);
+}
+```
 
+With this, you should see the titles of all jobs printed in the console.
 
-### Variable Declaration
-  <!-- * var 
-    * The original method of declaring a variable in JS
-  
-      ```js
-      var variableName = 123
-      ``` -->
+## Resources for Further Reading:
 
-  * let
-    * The new way to declaring variables since ES6 in 2015
-    * The variable can be reassigned.
+1.  [Chrome DevTools for JavaScript](https://developers.google.com/web/tools/chrome-devtools/javascript)
+2.  [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools)
+3.  [JavaScript Debugging](https://javascript.info/debugging-chrome)
 
-      ```js
-      let variableName = 234
-      ```
-  * const 
-    * Another way to declare variables as of ES6 in 2015.
-    * Variable names CANNOT be reassigned.
+# Section 3. Basic Syntax and Features
 
-      ```js
-      const variableName = 345
-      ```
-    * Reference types like objects and arrays are commonly declared with `const` as they can still be mutated by invoking methods that add, modify, or delete their contents. But, the variable itself cannot be reassigned to a new value.
+### From var to const: Learning about Variables and Constants in JavaScript
 
-### Reassigning variables
-  * let
-    ```js
-    let variableName = 123
-    console.log(variableName)
+Variables in JavaScript are fundamental. They're like containers for storing data values. In JavaScript, you can declare variables using `var`, `let`, or `const`.
 
-    variableName = 567
-    console.log(variableName)
-    ```
-  * const
-    ```js
-    const variableName = 123
-    console.log(variableName)
+`var` is the old way of declaring variables. However, it's not recommended because of its confusing scoping rules. Nowadays, `let` and `const` are preferred.
 
-    variableName = 567
-    console.log(variableName)
-    ```
+`let` allows you to declare a variable that can be changed later on, while `const` lets you declare a constant value---a value that cannot be changed.
 
+Let's declare some variables:
+
+```js
+let jobCount = jobs.length; // You can change this later (by reassigning its value)
+console.log(jobCount); // Outputs: 7
+
+const pi = 3.14159; // This value can never be changed (by reassignment)
+console.log(pi); // Outputs: 3.14159
+
+const compliments = [];
+compliments.push("You are very friendly"); // this is okay, because even though it modifies the compliments array, it doesn't reassign compliments to a new value.
+```
+
+### JavaScript Data Types: Diving into Numbers, Strings, Booleans, Arrays, and Objects
+
+JavaScript has a few basic data types:
+
+- `Number`: Any numerical value---integer or floating-point.
+- `String`: A sequence of characters used for text.
+- `Boolean`: A binary data type having two values, `true` and `false`.
+- `Array`: A collection of data items.
+- `Object`: A collection of key-value pairs.
+
+There are others, but these are the ones you'll see most often.
+
+Here's an example of each:
+
+```js
+let myNumber = 42; // Number
+let myString = "Hello, world!"; // String
+let myBoolean = true; // Boolean
+
+let myArray = [1, 2, 3, 4, 5]; // Array
+
+let myObject = {
+  // Object
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+```
+
+> Notice that none of these variable declarations includes a type like we would require in a language like C++. While it is technically possible to reassign a variable to a different type after it is declared, it is still good practice to keep the type of a variable consistent after you've assigned the variable a value. For example, avoid reassigning `myNumber` to `'27'` later on in the program.
+
+### Simplifying Complexity with Destructuring Assignment in JavaScript
+
+Destructuring assignment is a handy feature in JavaScript that lets you unpack values from arrays or properties from objects into distinct variables.
+
+Let's say we want to get the `title` and `company` of the first job in our array. Here's how we do it with destructuring:
+
+```js
+let { title, company } = jobs[0];
+console.log(title); // Outputs: "Ruby on Rails Engineer"
+console.log(company); // Outputs: "Aha!"
+```
+
+In this case, we've surrounded `title`, and `company` with `{}` because we're doing destructuring assignment on an object. Here, `jobs[0]` is the first job object in our array of jobs.
+
+### JavaScript's Interactive Features: Exploring Console Logging and Alerts
+
+JavaScript provides several ways to interact with users. Two of the most basic ones are `console.log()` and `alert()`.
+
+`console.log()` prints out a message to the console, which we've used extensively in our manual testing.
+
+`alert()` shows an alert dialog with a specified message and an OK button.
+
+```js
+console.log("This will be printed in the console.");
+
+alert("This will show up as an alert in the browser.");
+```
+
+Try running this in your console. Notice that alert() stops the execution of JavaScript until the user closes the alert. Therefore, it's not commonly used in modern web development but can be handy for simple debugging.
+
+There's another similar method called `confirm()`. It behaves in a similar way to `alert()`, except that it also presents a Cancel button in addition to the OK button generated in the dialog box. In addition, `confirm()` will return `true` if the OK button is clicked, and `false` if the Cancel button is clicked.
+
+```js
+if (confirm("Are you sure")) {
+  console.log("If you say so!");
+} else {
+  console.log("I thought not");
+}
+```
+
+And that's it for basic syntax and features. Remember, practice is the key to mastering these concepts. Don't hesitate to experiment in the console and run manual tests to understand how these features work.
+
+## Section 4. Control Structures
+
+Control structures guide the flow of your program. They include conditional statements (like `if`, `else if`, `else`, and `switch`) and loops (like `for`, `while`, and `do...while`).
+
+### Conditional Statements: `if`, `else if`, `else`
+
+In JavaScript, we use `if` to perform a block of code if a specified condition is true. We can add an `else if` to specify a new condition if the first one is false. `else` lets us catch all other cases.
+
+Let's take a job from our jobs array and perform some actions based on its salary:
+
+```js
+let job = jobs[0]; // Let's consider the first job
+
+let salaryRange = job.salary.split(" - "); // Split the salary range into an array
+let minSalary = parseInt(salaryRange[0].replace(/\D/g, "")); // Get the minimum salary as a number
+
+if (minSalary >= 100000) {
+  console.log(job.title + " is a high-paying job!");
+} else if (minSalary >= 50000) {
+  console.log(job.title + " offers a decent salary.");
+} else {
+  console.log(job.title + " might be a lower-paying job.");
+}
+```
+
+### The `switch` Statement
+
+The `switch` statement is used when we want to perform different actions based on different conditions.
+
+Suppose we want to sort our jobs based on the job's location. We can use a `switch` statement:
+
+```js
+switch (job.location) {
+  case "Chicago, IL (Remote)":
+    console.log("This job is based in Chicago.");
+    break;
+  case "Long Beach, CA (onsite)":
+    console.log("This job is based in Long Beach.");
+    break;
+  case "New York, NY (Remote)":
+    console.log("This job is based in New York.");
+    break;
+  default:
+    console.log("Location not specified for this job.");
+}
+```
+
+### Loops: `for`, `while`, `do...while`
+
+Loops are used to repeatedly execute a block of code as long as a specified condition is true.
+
+We can use a `for` loop to iterate over our jobs array and print out each job title:
+
+```js
+for (let i = 0; i < jobs.length; i++) {
+  console.log(jobs[i].title);
+}
+```
+
+A `while` loop executes as long as a specified condition is true. We can use it to do the same thing:
+
+```js
+let i = 0;
+while (i < jobs.length) {
+  console.log(jobs[i].title);
+  i++;
+}
+```
+
+Finally, a `do...while` loop is similar to a `while` loop, but it always executes the block at least once:
+
+```js
+i = 0;
+do {
+  console.log(jobs[i].title);
+  i++;
+} while (i < jobs.length);
+```
+
+And that's an overview of control structures in JavaScript. They are key to controlling the flow of your programs, so take your time to understand them and practice using them in your own code.
+
+## Section 5: Functions and Scope
+
+Functions are the basic building blocks of JavaScript programs. They allow you to wrap up chunks of code so they can be reused throughout your application. JavaScript has a few different ways to define functions, and each comes with its own characteristics.
+
+### Functions: The building blocks of JavaScript
+
+A function is defined with the `function` keyword, followed by a name, a list of parameters in parentheses `( )`, and the function body enclosed in curly brackets `{ }`.
+
+Let's create a function that calculates the average salary from our jobs array.
+
+```js
+function calculateAverageSalary(jobs) {
+  let totalSalary = 0;
+  for (let i = 0; i < jobs.length; i++) {
+    let salaryRange = jobs[i].salary.split(" - "); // Split the salary range into an array
+    let minSalary = parseInt(salaryRange[0].replace(/\D/g, "")); // Get the minimum salary as a number
+    let maxSalary = parseInt(salaryRange[1].replace(/\D/g, "")); // Get the maximum salary as a number
+    let averageSalary = (minSalary + maxSalary) / 2; // Calculate the average salary
+    totalSalary += averageSalary; // Add it to the total
+  }
+  return totalSalary / jobs.length; // Return the average salary across all jobs
+}
+
+console.log(`Average salary: ${calculateAverageSalary(jobs)}`);
+```
+
+### Calling all functions: How to define and call functions in JavaScript
+
+You can call (or run) a function by using its name followed by parentheses.
+
+In our previous example, we defined the `calculateAverageSalary()` function, then we called it using `calculateAverageSalary(jobs)` and logged the result.
+
+### Scoping it out: Understanding scope in JavaScript
+
+Scope is a concept that determines the accessibility (visibility) of variables, functions, and objects in some particular part of your code during runtime. In JavaScript, there are three types of scope:
+
+- Global Scope: Defined outside of all code blocks, globally scoped variables are visible from any part of the code.
+- Local Scope: Defined inside a function, locally scoped variables are only visible within that function.
+- Block Scope: Variables defined with `let` or `const` are scoped to the block in which they're defined.
+  - Using `let i = 0` to define the counter in a `for` loop means that the `i` variable won't actually persist beyond the loop.
+  - Similarly, if we define a `let` or `const` variable inside the `{}` of a loop, the variable only exists within that block.
+
+Let's see an example:
+
+```js
+let globalVar = "I am global!"; // This variable is globally scoped
+
+function checkScope() {
+  let localVar = "I am local!"; // This variable is locally scoped
+  console.log(globalVar); // We can access the global variable here
+  console.log(localVar); // And the local variable is also accessible
+}
+
+checkScope(); // Call the function
+console.log(globalVar); // We can access the global variable here
+console.log(localVar); // But we can't access the local variable here; it will throw an error
+```
+
+And that's an introduction to functions and scope in JavaScript! Make sure you understand these concepts before moving on because they're fundamental to your success as a JavaScript developer.
+
+## Section 6: Arrays, Array Methods, and Callbacks
+
+Arrays are a fundamental aspect of JavaScript, and they come with a whole slew of built-in methods. A callback is a function passed into another function as an argument to be executed later.
+
+### Arrays and Array Methods
+
+Let's revisit our jobs array and apply some array methods on it.
+
+```js
+console.log(jobs.length); // Logs the number of elements in the array
+console.log(jobs[0]); // Logs the first job in the array
+```
+
+Array methods help us manipulate and interact with arrays. Let's see some of them in action:
+
+```js
+// The forEach() method executes a provided function once for each array element.
+jobs.forEach(function (job) {
+  console.log(job.title);
+});
+
+// The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+const remoteJobs = jobs.filter(function (job) {
+  return job.location.includes("Remote");
+});
+console.log(remoteJobs);
+```
+
+### Callbacks
+
+A callback function is a function that is passed to another function as an argument and is expected to execute at a given time. This allows functions to be used flexibly and can lead to cleaner, more modular code. Both `forEach` and `filter` in the previous examples use callbacks.
+
+### Arrow Functions
+
+Introduced in ES6, arrow functions offer a more concise syntax for writing function expressions. They are especially useful when passing a short function as an argument to another function (like callbacks!).
+
+Here's an example of an arrow function:
+
+```js
+const double = (number) => number * 2; // Arrow function that doubles a number
+console.log(double(4)); // Logs: 8
+```
+
+They also play nicely with array methods:
+
+```js
+// Using the map() method to create a new array of job titles
+const jobTitles = jobs.map((job) => job.title);
+console.log(jobTitles);
+
+// Using the find() method to get the first job posted more than a week ago
+const oldJob = jobs.find((job) => job.postDate.includes("week"));
+console.log(oldJob);
+```
+
+Arrow functions and callbacks make JavaScript a powerful language for dealing with asynchronous events and data manipulation. They are a key part of the JavaScript toolkit, and you will use them frequently as you continue your journey into JavaScript.
+
+Bonus Section: Asynchronous JavaScript, Higher-Order Functions, and Callbacks
+--------------------------------------------------------------
+
+This section is a little bit trickier than what came before, and is a preview of content that we will review again later on in the course.
+
+Browsers are powerful applications that are capable of using multiple processor cores and working on multiple tasks simultaneously. For example, the browser, can be loading images and scripts from different servers on the internet while it's rendering the page and fetching data from another server.
+
+JavaScript is as a single-threaded language that is optimized to work within this situation to ensure that we can configure pieces of code so they run when particular browser events occur. This is accomplished in JavaScript by passing functions as arguments to functions that interact with asynchronous browser APIs. Functions that accept other functions as arguments are referred to as Higher-order functions.
 
 ### Higher-Order Functions
-  * A Higher-Order Function is any function that operates on any other function(s), either by taking them in as arguments or returning one.
-  
-  * In JavaScript, this is facilitated by the fact that functions are [First-Class objects](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function).
 
-  ```js
-  function outerFunc(callbackFunc){
-      return callbackFunc();
-  }
-  ```
+A higher-order function is a function that can take one or more functions as arguments, return a function as its result, or both. JavaScript's first-class function capability, which means functions can be assigned to variables, passed into other functions as arguments, or returned from other functions, makes the creation of higher-order functions possible.
 
-  * In the above example, the Higher-Order function is the outerFunc function because it takes in a callback (cb) and returns the invocation of the callback inside of it.
-
-
-### Callback Functions
-
-  * A callback function is any function that is passed into another function as an argument, which is then invoked inside of the outer function to complete some kind of routine or action.
-
-  * Callback functions can be declared functions, function expressions, or even anonymous functions depending on your needs and the context in which you are using them.
-
-  ```js
-  function outerFunc(cb){
-      return cb();
-  }
-  ```
-
-  * Looking at the same example from before, the callback in this case is cb, as it is being passed into the outerFunc function and is invoked inside of it.
-
-
-## Array Methods
-  * To solidify understanding of higher order functions and callbacks, we are going to look at some of the more popular iterative array methods provided for us by JavaScript.
-  * Some of the most popular are forEach, map, and reduce
-
-  ### array.forEach() 
-  * The forEach method takes a callback and runs it once for each element in the array.
-  * forEach can also take an optional index argument to keep track of the index that you are currently working with. 
-  * forEach function does not mutate the array that it is being operated on, and does not return any value itself.
-
-  ```js
-    let numbers = ["h","e", "l", "l", "o", 2, 3, 4, 5, 6, 7, 8 ]
-
-    //1. for loop
-    for( let index = 0 ; index < numbers.length; index++ ){
-        console.log(numbers[index], index)
-    }
-
-    //2. long call back function 
-    numbers.forEach(callbackFunc)
-
-    function callbackFunc (m){
-        console.log(m)
-    }
-    //3. arrow function 
-    numbers.forEach((item, idx) => {
-        console.log(item, idx)}
-        )
-    //4.  one liner 
-    numbers.forEach(( item ) => console.log(item))
-
-    //Quizzzzz iterate over these letters and make an object with letters as keys and a count of their occurrences as values
-    let letters = ["a", "b", "a", "c", "c"]
-
-    // { a: 2, b: 1, c: 2}
-  ```
-
-  ### array.map() 
-  * The map method takes a callback function and creates a new array by performing the callback on each array element.
-  * map can also take an optional index array.
-  * map does not mutate the original array. It instead returns a new array, of the same length as the original array, containing the return values of each call to the callback function as its elements.
-  ```js
-  // .map 
-  const itemArray = [
-    {genre: "val1", bpm: "val2"},
-    {genre: "hip hop", bpm: 130 },
-    {genre: "pop", bpm: 120},
-    {genre: "indie rock", bpm: 100}
-  ]
-
-  const genreName = itemArray.map ( (eachItemObj) => {
-    return eachItemObj.bpm
-  })
-
-  console.log(genreName)
-  ```
-  
-
-
-### array.reduce() 
-
-* The reduce method takes a callback function and an iterator (which can be any data type) and runs the callback on each array element to reduce it to a single value.
-* Your callback should take at least two arguments, which are regularly known as `accumulator` and `current`. These will be used to reduce each value in the array into the iterator, and as such your callback must return a value to be used on the next iteration.
-* Reduce does not mutate the original array, but it does return a new value based on the callback function.
-* The return value of the callback function is passed as the first argument to the next call to the callback, while the current array element is passed as the second argument.
-
+Let's see an example:
 
 ```js
-  let numbers = [2, 5, 20, 9, 3, 5, 7, 100000, 8 , 13]
+function greet(name) {
+  return `Hello, ${name}!`;
+}
 
-  // arr.reduce()
-  function maxNum ( acc, val) {
-      console.log("ACC::", acc, "Current Val::", val)
-      if(val > acc){
-          acc = val
-      }
-      return acc;
-  }
+function shoutGreeting(greetingFunction, name) {
+  let greeting = greetingFunction(name);
+  return greeting.toUpperCase();
+}
 
-  let biggestNum = numbers.reduce(maxNum)
-  console.log(biggestNum)
-
-  // arr.reduce()
-  let biggestNum = numbers.reduce((acc, val) => {
-      if (val > acc){
-          console.log(acc, val)
-          acc = val
-      }
-      return acc;
-  }, 0)
-
-  console.log(biggestNum)
+console.log(shoutGreeting(greet, "John")); // Logs: HELLO, JOHN!
 ```
 
+In this example, `shoutGreeting` is a higher-order function that takes another function (`greet`) as an argument.
 
+### Asynchronous JavaScript and Callbacks
 
----
+Callbacks are integral to JavaScript's asynchronous behavior. Here are a few examples of how JavaScript uses callbacks with certain built-in functions:
 
-## Documentation
+**setInterval and setTimeout**
 
-- **PLEASE ALSO BURN THIS INTO YOUR MEMORY**. Always start with [MDN](https://developer.mozilla.org/en-US/) when looking at JS documentation. W3 Schools is great for HTML and CSS, **NOT SO MUCH FOR JAVASCRIPT**.
+These functions delay the execution of a callback function by a set amount of time.
 
-(all hail Mozilla)
+```js
+setTimeout(() => {
+  console.log("This message will display after 2 seconds!");
+}, 2000);
 
-- **INDENTATION AND PROPER STYLE ARE ALSO SUPER IMPORTANT MOVING FORWARD**. Airbnb has an amazing [JavaScript Style Guide](https://github.com/airbnb/javascript) if you're unsure about how to format your JS code. Trust me, learn to indent properly now before you end up in a curly bracket hellscape.
+let counter = 0;
+let intervalId = setInterval(() => {
+  counter++;
+  console.log(`This message has been logged ${counter} time(s).`);
+  if (counter === 5) {
+    clearInterval(intervalId);
+  }
+}, 1000);
+```
 
-![who would win, curly boi](https://i.kym-cdn.com/photos/images/facebook/001/257/329/781.jpg)
+**addEventListener**
 
----
+This function attaches an event handler to an element. The event handler (a callback function) is executed whenever the specified event occurs.
 
+```js
+// In the HTML
+<button id="myButton">Click me!</button>
 
----
+// In the JavaScript
+const button = document.getElementById("myButton");
+button.addEventListener("click", () => {
+  console.log("Button clicked!");
+});
+```
 
-## External Resources
-- [ECMA](https://en.wikipedia.org/wiki/Ecma_International)
+**fetch**
 
-- [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
-- [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
-- [HTTP Request Response Cycle](https://www.oreilly.com/library/view/using-google-app/9780596802462/ch01.html)
-- [Functions as First Class objects](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
-- [Browser Wars](https://en.wikipedia.org/wiki/Browser_wars)
-- [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich)
-- [Netscape](https://en.wikipedia.org/wiki/Netscape)
-- [How to use console.log and others](https://console.spec.whatwg.org/#dir)
-- [Javascript Equality Table](https://dorey.github.io/JavaScript-Equality-Table/)
-- [C++ vs JavaScript](https://www.koombea.com/blog/c-vs-javascript/)
+The Fetch API is used to make HTTP requests (sometimes referred to as AJAX requests). It takes a URL as an input and returns a Promise that resolves to the Response object representing the response to the request. Fetch uses a callback function (typically an arrow function) to handle the response.
+
+```js
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log('Error:', error));
+```
+
+All these examples demonstrate the power of using callbacks to handle asynchronous events in JavaScript. These concepts are at the heart of JavaScript's power and flexibility, and we'll be revisiting all of this content in greater detail as you progress through the course.
+
+## Resources:
+
+1. [Mozilla Developer Network (MDN) - JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+2. [JavaScript Basics for Beginners](https://www.codecademy.com/learn/introduction-to-javascript)
+3. [JavaScript: The World's Most Misunderstood Programming Language](https://www.crockford.com/javascript/javascript.html)
+4. [JavaScript for C++ Programmers](https://www.dyn-web.com/javascript/for-cpp-programmers.php)
+5. [Eloquent JavaScript - A Modern Introduction to Programming](https://eloquentjavascript.net/)
+6. [JavaScript Arrays - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+7. [JavaScript Testing: Unit vs Functional vs Integration Tests](https://www.sitepoint.com/javascript-testing-unit-functional-integration/)
+8. [First Class functions](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
+9. [Using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
