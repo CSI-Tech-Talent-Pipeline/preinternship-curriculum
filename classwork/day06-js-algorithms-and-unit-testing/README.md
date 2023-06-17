@@ -589,9 +589,9 @@ Why is immutability so important? It comes with a few key benefits:
 
 1.  **Predictability**: With immutability, we can be sure that our state won't be changed unexpectedly. This makes our code easier to understand and debug.
 
-  2.  **Performance**: Immutable data can make our application more efficient. Because we're not changing our original state, we can make optimizations based on the fact that if a state object remains the same, no changes have been made.
+2.  **Performance**: Immutable data can make our application more efficient. Because we're not changing our original state, we can make optimizations based on the fact that if a state object remains the same, no changes have been made.
 
-  3.  **Versioning**: Every time we return a new state from a reducer, we're essentially creating a new version of our state. This means we can store our state's history and implement features like undo/redo.
+3.  **Versioning**: Every time we return a new state from a reducer, we're essentially creating a new version of our state. This means we can store our state's history and implement features like undo/redo.
 
 While ther are many applications that don't use `Redux`, React applications also rely on immutable state, so it's important to recognize and pay attention to what methods will cause mutations to state and to avoid using those with React & Redux.
 
