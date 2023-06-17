@@ -72,7 +72,7 @@ Algorithms also help in maintaining the program structure, making the code easie
 
 **9.** [**Dynamic Programming Algorithm**](https://www.geeksforgeeks.org/dynamic-programming/)**:** This algorithm uses the concept of using the already found solution to avoid repetitive calculation of the same part of the problem. It divides the problem into smaller overlapping subproblems and solves them.
 
-**10.** [**Randomized Algorithm**](https://www.geeksforgeeks.org/randomized-algorithms/)**:** In the randomized algorithm we use a random number so it gives immediate benefit. The random number helps in deciding the expected outcome.
+**10.** [**Randomized Algorithm**](https://www.geeksforgeeks.org/randomized-algorithms/)**:** In the randomized algorithm we use a random number to improve the performance of an existing algorithm. For example, in randomized Quick Sort, we use a random number to pick the next pivot.
 
 To learn more about the types of algorithms refer to the article about "[**Types of Algorithms**](https://www.geeksforgeeks.org/most-important-type-of-algorithms/)".
 
@@ -122,7 +122,7 @@ Later on, we'll use integration tests to ensure that the **real** parts of our p
 ![Where Unit Testing Fits](https://res.cloudinary.com/dlzuobe8h/image/upload/v1686240091/CSI%20TTP/Unit-Testing_aynrr7.png)
 ### Introduction to Jest
 
-Jest is a delightful JavaScript testing framework maintained by Facebook, Inc. with a focus on simplicity and support for large web applications. It works with projects using Babel, TypeScript, Node.js, React, Angular, Vue.js and Svelte.
+Jest is a delightful JavaScript testing framework originally developed by Facebook and now maintained by the OpenJS Foundation. It focuses on simplicity and support for large web applications. It works with projects using Babel, TypeScript, Node.js, React, Angular, Vue.js and Svelte.
 
 Some of the main features of Jest are:
 
@@ -202,7 +202,7 @@ Received: undefined
   at Object.toBe (sum.test.js:4:21)
 ```
 
-It's important to always watch our tests fail before we watch them pass. It's possible to make a mistake in a test such that it always passes. But, our tests are only good if they can fail when something is wrong. So, we need to make sure that we watch our test fail before we write the code that makes it pass.
+It's important to always watch our tests fail before we watch them pass. It's possible to make a mistake in a test such that it always passes. But, our tests are only doing their job if they can fail when something is wrong. So, we need to make sure that we watch our test fail before we write the code that makes it pass.
 
 ```js
 function sum(a, b) {
