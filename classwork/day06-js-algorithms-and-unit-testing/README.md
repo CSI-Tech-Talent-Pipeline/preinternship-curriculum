@@ -7,7 +7,6 @@
 - apply problem-solving strategies to design algorithms.
 - understand the role of unit tests in verifying the functionality of their code.
 - write basic unit tests using Jest for their JavaScript functions.
-- understand the connection between the concepts covered in this lesson and state management libraries like Redux.
 - interpret and analyze test results, and debug their code based on these results.
 
 ## Agenda
@@ -24,7 +23,6 @@
   - Writing basic unit tests for JavaScript functions.
   - Example: Writing test cases for a factorial function
 - Review and Q&A (10 minutes)
-- Assignment Preview (15 minutes)
 
 
 ## Introduction to Algorithms:
@@ -555,67 +553,6 @@ In this test, we're using jest.mock to replace the axios.get function with a moc
 
 > A cloer look at: `axios.get.mockResolvedValue({ data: mockUser });` The reason we're establishing the mock in this way is that the axios library's `get` method returns a promise that we can expect to resolve with a value in the format `{ data: someUser }`. If we were working with a function that didn't involve asynchronous code, we could mock the return value with `mockReturnVAlue`. See the [Jest Docs on Mock Functions](https://jestjs.io/docs/mock-functions) for more info.
 
-
-
-## Assignment Preview
-
-Reducer Functions and Immutable State
--------------------------------------
-
-### Introduction to Redux and reducer functions
-
-Redux is a predictable state container for JavaScript apps, allowing you to manage your application's state in a predictable manner. It does this through reducer functions, which are functions that determine changes to an application's state using actions. We'll be talking more about state and how it is used next week. For now, think of state as something the application is keeping tack of that can change as the user interacts with our app.
-
-Reducers in Redux receive the current state of the application and an action that's been dispatched, and they return a new state. Here's a very basic example of a reducer:
-
-```js
-function myReducer(state = {}, action) {
-  switch (action.type) {
-    case 'ACTION_TYPE':
-      return Object.assign(state, { key: action.payload });
-    default:
-      return state;
-  }
-}
-```
-
-This function takes the current `state` and an `action` as arguments, and it returns a new state. If the action's type is 'ACTION\_TYPE', it returns a new object that combines the properties of the current state with the action's payload.
-
-### Immutable state: Why it's important and why we avoid mutating state directly
-
-In Redux, state is considered to be immutable. This means that we never modify it directly. Instead, whenever we want to make changes to the state, we return a new copy of the state with our changes.
-
-Why is immutability so important? It comes with a few key benefits:
-
-1.  **Predictability**: With immutability, we can be sure that our state won't be changed unexpectedly. This makes our code easier to understand and debug.
-
-2.  **Performance**: Immutable data can make our application more efficient. Because we're not changing our original state, we can make optimizations based on the fact that if a state object remains the same, no changes have been made.
-
-3.  **Versioning**: Every time we return a new state from a reducer, we're essentially creating a new version of our state. This means we can store our state's history and implement features like undo/redo.
-
-While ther are many applications that don't use `Redux`, React applications also rely on immutable state, so it's important to recognize and pay attention to what methods will cause mutations to state and to avoid using those with React & Redux.
-
-The example above updates the state with this line:
-
-```js
-Object.assign(state, { key: action.payload });
-```
-
-Using [`Object.assign`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) does modify the target object (its first argument). So, in this case it does result in a violation of immutable state. There are a couple of ways to fix this issue, you can either:
-
-```js
-// make the target object a new empty object then
-// merge in all properties of state
-// followed by the properties that should be updated 
-// based on the action
-Object.assign({}, state, { key: action.payload });
-// or use the spread operator instead
-{ ...state, key: action.payload }
-```
-
-While both technically work, it is much more common to see this done with the spread operator.
-
-Your assignment today is to practice writing a few reducer functions and to write tests that verify that a new state object is generated and returned and the original state object is left unchanged.
 
 ## Resources
 - [Jest Docs: Getting Starter](https://jestjs.io/docs/getting-started)
