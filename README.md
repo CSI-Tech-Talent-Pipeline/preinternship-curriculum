@@ -47,9 +47,9 @@ Daily Schedule (Subject To Change!)
 #### Week 2
 - Monday 6/19/23 - No class (Juneteenth)
 - Tuesday 6/20/23 - **Day 6**: Using JavaScript for Algorithms & Unit Testing
-- Wednesday 6/21/23 - **Day 7** Cover Letters & Email Communication
-- Thursday 6/22/23 - **Day 8**: DOM Manipulation
-- Friday 6/23/23 - **Day 9**: Intro to React
+- Wednesday 6/21/23 - **Day 7**: DOM Manipulation
+- Thursday 6/22/23 - **Day 8**: Intro to React
+- Friday 6/23/23 - **Day 9**: Cover Letters & Email Communication
 
 #### Week 3
 - Monday 6/26/23 - **Day 10**: React - State & Events
@@ -184,12 +184,7 @@ Resources:
 - [Jest Tutorial: what is Jest?](https://www.valentinog.com/blog/jest/)
 
 
-
-**Day 7 Cover Letters & Email Communication (06/21/23)**
-
-No code for the day
-
-**Day 8: DOM Manipulation (06/22/23)**
+**Day 7: DOM Manipulation (06/21/23)**
 
 Video Resources:
 
@@ -214,8 +209,7 @@ Slides:
 
 - [DOM Events Slides](https://raw.githack.com/learn-co-curriculum/SENG-LIVE-013023-Phase-1-JS/main/03_DOM_Events/assets/export/index.html)
 
-
-**Day 9: Intro to React (06/23/23)**
+**Day 8: Intro to React (06/22/23)**
 
 Suggested Pre-reading:
 - [React: Quick Start](https://react.dev/learn)
@@ -223,6 +217,12 @@ Suggested Pre-reading:
 - [React: Describing the UI](https://react.dev/learn/describing-the-ui)
 - [React: Your First Component](https://react.dev/learn/your-first-component)
 - [React: Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
+
+
+**Day 9: Cover Letters & Email Communication (06/23/23)**
+
+No code for the day
+
 
 **Day 10: React - State & Events (06/26/23)**
 
