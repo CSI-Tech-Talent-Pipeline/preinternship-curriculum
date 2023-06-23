@@ -219,9 +219,12 @@ Suggested Pre-reading:
 - [React: Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
 
 
-**Day 9: Cover Letters & Email Communication (06/23/23)**
+**Day 9: Cover Letters & Email Communication + Mini React Tailwind Lecture(06/23/23)**
 
-No code for the day
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Tailwind CSS Installation Guide](https://tailwindcss.com/docs/installation)
+- [Tailwind CSS Utility Classes](https://tailwindcss.com/docs/utility-first)
+- [Vite Documentation](https://vitejs.dev/guide/)
 
 
 **Day 10: React - State & Events (06/26/23)**
