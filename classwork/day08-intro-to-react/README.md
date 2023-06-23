@@ -330,7 +330,7 @@ function createNewJob(job) {
 
 Notice that the code is very disjointed. The code that handles the HTML markup is separate from the data that should be included within it. We have to use `querySelector()` to target the elements where the data should go. In general, this is an **imperative** approach (we tell the code **how** to accomplish our task of rendering a job to the DOM).
 
-React takes an **imperative** approach to solving this problem. This means that we get to focus on **what** we want to have rendered to the DOM and React handles the **how**.
+React takes an **declarative** approach to solving this problem. This means that we get to focus on **what** we want to have rendered to the DOM and React handles the **how**.
 
 ```jsx
 export default function JobCard({ job }) {
