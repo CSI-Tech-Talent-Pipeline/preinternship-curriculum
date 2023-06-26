@@ -56,10 +56,12 @@ You can leave the postcss config file as is.
 
 ```css
 /* ./src/index.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
+
+There's an unknown `@` rule warning that comes up in the editor, here's [an article](https://www.codeconcisely.com/posts/tailwind-css-unknown-at-rules/) you can use with steps to resolve the issue. I went through the steps on [Installing the TailwindCSS Intellisense plugin](https://www.codeconcisely.com/posts/tailwind-css-unknown-at-rules/#installing-tailwind-css-intellisense-plugin) and focusing on the `index.css` file to resolve the issue in my workspace.
 
 5. run `npm run dev` in your terminal
 
