@@ -28,8 +28,8 @@ console.log(subMenu)
 
 
 //3. define attributes on that node 
-subMenu.textContent = "The Finest (Funniest) place on Earth "
-subMenu.innerText = "Warm place"
+// subMenu.textContent = "The Finest (Funniest) place on Earth "
+// subMenu.innerText = "Warm place"
 console.log(subMenu)
 
 //4. append to the parent Element
