@@ -24,7 +24,9 @@ function AddJobForm({ onAddJob }) {
 
   const handleAddJobFormSubmit = async (e) => {
     e.preventDefault();
-
+    // modal should close
+    // form should clear
+    setJobFormState(initialJobFormState);
     // new job should be added to the DOM
     const preparedJob = {
       ...jobFormState,
@@ -32,18 +34,18 @@ function AddJobForm({ onAddJob }) {
       maxSalary: parseInt(jobFormState.maxSalary),
       status: 1,
     };
-    const response = await fetch("/jobs", {
+    // send request to save job to db and get response
+    const response = await fetch("http://localhost:3000/jobs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(preparedJob),
     });
-    const newJob = await response.json();
-    // parent component should be notified of created job
-    onAddJob(newJob);
-    // form should clear
-    setJobFormState(initialJobFormState);
+    console.log("response", response);
+    const savedJob = await response.json();
+    console.log("savedJob", savedJob);
+    onAddJob(savedJob);
   };
 
   return (
