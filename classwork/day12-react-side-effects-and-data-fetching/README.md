@@ -225,5 +225,8 @@ const handleAddJobFormSubmit = async (e) => {
 - [MDN Web Docs: Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [MDN Web Docs: async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [MDN Web Docs: Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [What the heck is the event loop anyway (video)](https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;vl=en)
 - [React Docs: useEffect](https://reactjs.org/docs/hooks-effect.html)
 - [json-server](https://github.com/typicode/json-server)
+- [JSONVue Chrome Extension](https://chrome.google.com/webstore/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc)
+- [HTTP.cat status codes reference via cats](https://http.cat/)

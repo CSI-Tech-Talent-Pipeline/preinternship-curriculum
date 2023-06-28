@@ -294,5 +294,7 @@ function AddJobForm({ onAddJob }) {
 
 ## Resources
 
+- [Reacting to Input with State](https://react.dev/learn/reacting-to-input-with-state)
+- [Sharing State Between Components](https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-example)
 - [Create a Custom Modal in React with Tailwind CSS](https://www.youtube.com/watch?v=nwJK-jo91vA)
 - [Modals with React Router 6 & Remix (for later)](https://www.infoxicator.com/en/modals-with-react-router-6-and-remix)

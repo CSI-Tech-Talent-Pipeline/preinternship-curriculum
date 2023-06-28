@@ -124,7 +124,7 @@ Daily Schedule (Subject To Change!)
 
 - [Blackboard/ Onboarding](https://bbhosted.cuny.edu/webapps/blackboard/content/listContent.jsp?content_id=_75836936_1&course_id=_2267876_1&mode=reset)
 
-**Day 2: [Introduction to HTML/CSS, Bootstrap, Flexbox & Grid (06/13/23)](./day02-intro-to-html/README.md)**
+**Day 2: [Introduction to HTML/CSS, Bootstrap, Flexbox & Grid (06/13/23)](.classwork/day02-intro-to-html/README.md)**
 ### Resources
 - [Interactive box-model Demo](https://codepen.io/psande/full/nKOJyX)
 - [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
@@ -134,7 +134,7 @@ Daily Schedule (Subject To Change!)
 
 
 
-**Day 3: [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md), Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
+**Day 3: [Intro to Git & GitHub](./classwork/day03-intro-to-git-and-github/README.md), Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
 
 - [Make a Good README](https://www.makeareadme.com/)
 - [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md)
@@ -143,7 +143,7 @@ Daily Schedule (Subject To Change!)
 - [Git and GitHub Slides - Part I](https://docs.google.com/presentation/d/12tgnThkuKGHpbxZEv2RTWOTLpViL1O3hcHEGNJv9Wzo/edit?usp=sharing)
 - [Git and GitHub Slides - Part II](https://docs.google.com/presentation/d/1Qkz1Z83P2b2EUFDrMN8L1X7BcMwZzzkSqCKCI8INH78/edit?usp=sharing)
 
-**Day 4: Intro to JavaScript (06/15/23)**
+**Day 4: [Intro to JavaScript](./classwork/day04-intro-to-js/README.md) (06/15/23)**
 
 - [JS Data Types & Variables](https://frontend.turing.edu/lessons/module-1/js-data-types-and-variables.html)
 
@@ -175,7 +175,7 @@ Other resources:
 
 No code for the day
 
-**Day 6: Using JavaScript for Algorithms & Unit Testing (06/20/23)**
+**Day 6: [Using JavaScript for Algorithms & Unit Testing](./classwork/day06-js-algorithms-and-unit-testing/README.md) (06/20/23)**
 
 Resources:
 - [Introduction to Algorithms](https://www.geeksforgeeks.org/introduction-to-algorithms/)
@@ -184,7 +184,7 @@ Resources:
 - [Jest Tutorial: what is Jest?](https://www.valentinog.com/blog/jest/)
 
 
-**Day 7: DOM Manipulation (06/21/23)**
+**Day 7: [DOM Manipulation](./classwork/day07-DOM-manipulation/README.md) (06/21/23)**
 
 Video Resources:
 
@@ -209,7 +209,7 @@ Slides:
 
 - [DOM Events Slides](https://raw.githack.com/learn-co-curriculum/SENG-LIVE-013023-Phase-1-JS/main/03_DOM_Events/assets/export/index.html)
 
-**Day 8: Intro to React (06/22/23)**
+**Day 8: [Intro to React](./classwork/day08-intro-to-react/README.md) (06/22/23)**
 
 Suggested Pre-reading:
 - [React: Quick Start](https://react.dev/learn)
@@ -219,7 +219,7 @@ Suggested Pre-reading:
 - [React: Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
 
 
-**Day 9: Cover Letters & Email Communication + Mini React Tailwind Lecture(06/23/23)**
+**Day 9: Cover Letters & Email Communication + [Mini React Tailwind Lecture](./classwork/day09-react-and-tailwind-mini-lecture/README.md) (06/23/23)**
 
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Tailwind CSS Installation Guide](https://tailwindcss.com/docs/installation)
@@ -227,11 +227,31 @@ Suggested Pre-reading:
 - [Vite Documentation](https://vitejs.dev/guide/)
 
 
-**Day 10: React - State & Events (06/26/23)**
+**Day 10: [React - State & Events](./classwork/day10-react-state-and-events/README.md) (06/26/23)**
 
-**Day 11: React - Forms & Lifting State (06/27/23)**
+- [Responding to Events](https://react.dev/learn/responding-to-events)
+- [State: A component's memory](https://react.dev/learn/state-a-components-memory)
+- [Render & Commit](https://react.dev/learn/render-and-commit)
+- Testing Library Docs - [The more declarative getByRole query](https://testing-library.com/docs/queries/about/#priority)
+- Classnames - [A simple JavaScript utility for conditionally joining classNames together](https://github.com/JedWatson/classnames)
+- React Docs - [Conditional Rendering](https://react.dev/learn/conditional-rendering)
 
-**Day 12: React - Side Effects & Data Fetching (Create & Read)(06/28/23)**
+**Day 11: [React - Forms & Lifting State](./classwork/day11-react-forms-and-lifting-state/README.md) (06/27/23)**
+
+- [Reacting to Input with State](https://react.dev/learn/reacting-to-input-with-state)
+- [Sharing State Between Components](https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-example)
+- [Create a Custom Modal in React with Tailwind CSS](https://www.youtube.com/watch?v=nwJK-jo91vA)
+
+**Day 12: [React - Side Effects & Data Fetching (Create & Read)](./classwork/day12-react-side-effects-and-data-fetching/README.md) (06/28/23)**
+
+- [MDN Web Docs: Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [MDN Web Docs: async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [MDN Web Docs: Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [What the heck is the event loop anyway (video)](https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;vl=en)
+- [React Docs: useEffect](https://reactjs.org/docs/hooks-effect.html)
+- [json-server](https://github.com/typicode/json-server)
+- [JSONVue Chrome Extension](https://chrome.google.com/webstore/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc)
+- [HTTP.cat status codes reference via cats](https://http.cat/)
 
 **Day 13 React Router and Client-Side Routing in a SPA (06/29/23)**
 
