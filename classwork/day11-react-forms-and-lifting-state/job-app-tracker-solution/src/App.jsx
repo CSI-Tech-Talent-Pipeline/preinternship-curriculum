@@ -1,9 +1,10 @@
 import { useState } from "react";
 import classNames from "classnames";
 import JobCard from "./JobCard";
-import jobs from "./jobs";
+import jobsData from "./jobs";
 import "./App.css";
 import Modal from "./ui/Modal";
+import AddJobForm from "./AddJobForm";
 
 const statuses = {
   1: "Bookmarked",
@@ -15,22 +16,20 @@ const statuses = {
 };
 
 function App() {
+  const [jobs, setJobs] = useState(jobsData);
   const [selectedStatus, setSelectedStatus] = useState(1);
-  const [isModalVisible, setIsModalVisible] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const filteredJobs = jobs.filter(job => job.status === selectedStatus)
+  const filteredJobs = jobs.filter((job) => job.status === selectedStatus);
 
   const jobCards = filteredJobs.map((job, i) => {
     return <JobCard job={job} key={i} />;
   });
 
-  const statusButtons = Object.keys(statuses).map(statusId => {
-    const buttonClass = classNames(
-      "px-4 py-2 border",
-      {
-        "bg-blue-500": selectedStatus === parseInt(statusId)
-      }
-    )
+  const statusButtons = Object.keys(statuses).map((statusId) => {
+    const buttonClass = classNames("px-4 py-2 border", {
+      "bg-blue-500": selectedStatus === parseInt(statusId),
+    });
     return (
       <button
         key={statusId}
@@ -40,19 +39,41 @@ function App() {
         {statuses[statusId]}
       </button>
     );
-  })
+  });
+
+  const onAddJob = (job) => {
+    setJobs((jobs) =>
+      jobs.concat({
+        ...job,
+        minSalary: parseInt(job.minSalary),
+        maxSalary: parseInt(job.maxSalary),
+        status: 1,
+      })
+    );
+    setIsModalVisible(false);
+  }
 
   return (
     <div className="mx-auto max-w-4xl">
       <h1>Job Application Tracker</h1>
       <div className="grid grid-cols-6 my-4">{statusButtons}</div>
-
+      <div className="flex justify-between mb-4">
+        <div></div>
+        <div>
+          <button
+            className="bg-blue-500 px-4 py-2"
+            onClick={() => setIsModalVisible(true)}
+          >
+            + Add Job
+          </button>
+        </div>
+      </div>
       {jobCards}
-      <Modal isVisible={isModalVisible} hideModal={() => setIsModalVisible(false)}>
-        <form>
-          <h1>Add Job Posting</h1>
-          
-        </form>
+      <Modal
+        isVisible={isModalVisible}
+        hideModal={() => setIsModalVisible(false)}
+      >
+        <AddJobForm onAddJob={onAddJob} />
       </Modal>
     </div>
   );

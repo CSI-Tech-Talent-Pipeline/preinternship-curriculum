@@ -19,7 +19,8 @@ test("renders the correct job information", () => {
     image: { src: "image.jpg", alt: "job image" },
     company: "Google",
     title: "Software Engineer",
-    salary: "100k",
+    minSalary: 100000,
+    maxSalary: 130000,
     location: "New York",
     postDate: "2022-06-20",
   };
@@ -28,7 +29,7 @@ test("renders the correct job information", () => {
 
   expect(screen.getByText('Software Engineer')).toBeInTheDocument();
   expect(screen.getByText('Google')).toBeInTheDocument();
-  expect(screen.getByText('100k')).toBeInTheDocument();
+  expect(screen.getByText('$100000 - $130000')).toBeInTheDocument();
   expect(screen.getByText('New York')).toBeInTheDocument();
   expect(screen.getByText('2022-06-20')).toBeInTheDocument();
 });
@@ -38,7 +39,8 @@ test("renders an image with the correct src and alt", () => {
     image: { src: "image.jpg", alt: "job image" },
     company: "Google",
     title: "Software Engineer",
-    salary: "100k",
+    minSalary: 100000,
+    maxSalary: 130000,
     location: "New York",
     postDate: "2022-06-20",
   };
@@ -49,3 +51,20 @@ test("renders an image with the correct src and alt", () => {
   expect(image).toBeInTheDocument();
   expect(image).toHaveAttribute("src", "image.jpg");
 });
+
+test("renders a job with a placeholder if not provided with an image", () => {
+  const job = {
+    company: "Google",
+    title: "Software Engineer",
+    minSalary: 100000,
+    maxSalary: 130000,
+    location: "New York",
+    postDate: "2022-06-20",
+  };
+
+  render(<JobCard job={job} />);
+
+  const image = screen.getByAltText("No company logo available");
+  expect(image).toBeInTheDocument();
+  expect(image).toHaveAttribute("src", "https://via.placeholder.com/100x100");
+})
