@@ -29,11 +29,6 @@ export async function action({ request, params }) {
   return { note };
 }
 
-const mediumTime = new Intl.DateTimeFormat("en", {
-  timeStyle: "medium",
-  dateStyle: "short",
-});
-
 function Job() {
   const { job, notes } = useLoaderData();
   const {
@@ -63,7 +58,7 @@ function Job() {
 
   return (
     <div className="max-w-4xl mx-auto p-8">
-      <Link to="/">{'<'} Back</Link>
+      <Link to="/">{"<"} Back</Link>
       <h1>{title}</h1>
       <p>
         <i>{company}</i>
@@ -91,7 +86,7 @@ function Job() {
           </tbody>
         </table>
       </div>
-      <h2>Notes</h2>
+      <h2 className="text-xl my-2">Notes</h2>
       <Form className="my-4 flex gap-2" method="post">
         <input
           placeholder="add a note..."

@@ -11,7 +11,11 @@ import Job, {
 } from "./routes/job";
 import JobList, { loader as jobLoader } from "./JobList";
 import AddJobForm, { action as addJobAction } from "./AddJobForm.jsx";
-import EditJob, { loader as editJobLoader } from "./routes/editJob";
+import EditJob, {
+  loader as editJobLoader,
+  action as editJobAction
+} from "./routes/editJob";
+import { action as destroyNoteAction } from "./routes/destroyNote";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +24,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
+        index: true,
         element: <JobList />,
         loader: jobLoader,
       },
@@ -34,20 +38,25 @@ const router = createBrowserRouter([
         element: <JobList />,
         loader: jobLoader,
       },
+      {
+        path: "jobs/:jobId",
+        element: <Job />,
+        errorElement: <ErrorPage />,
+        loader: jobDetailLoader,
+        action: notesAction,
+      },
+      {
+        path: "jobs/:jobId/edit",
+        element: <EditJob />,
+        errorElement: <ErrorPage />,
+        loader: editJobLoader,
+        action: editJobAction,
+      },
+      {
+        path: "notes/:noteId/destroy",
+        action: destroyNoteAction,
+      },
     ],
-  },
-  {
-    path: "jobs/:jobId",
-    element: <Job />,
-    errorElement: <ErrorPage />,
-    loader: jobDetailLoader,
-    action: notesAction,
-  },
-  {
-    path: "jobs/:jobId/edit",
-    element: <EditJob />,
-    errorElement: <ErrorPage />,
-    loader: editJobLoader
   },
 ]);
 

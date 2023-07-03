@@ -2,9 +2,9 @@ import {
   Form,
   useLoaderData,
   Link,
-  useNavigate,
+  useFetcher
 } from "react-router-dom";
-import { FaPencilAlt } from "react-icons/fa";
+import { FaPencilAlt, FaTrash } from "react-icons/fa";
 import { statusTextById, formatTime } from "../utils";
 
 export async function loader({ params }) {
@@ -19,6 +19,10 @@ export async function loader({ params }) {
 
 export async function action({ request, params }) {
   const formData = await request.formData();
+  if (formData.get("action") === "deleteNote") {
+    const response = await fetch(`http://localhost:3000/notes/${formData.get("noteId")}`, { method: "DELETE" })
+    return { ok: true };
+  }
   const preparedNote = {
     ...Object.fromEntries(formData),
     timestamp: new Date(),
@@ -35,14 +39,9 @@ export async function action({ request, params }) {
   return { note };
 }
 
-const mediumTime = new Intl.DateTimeFormat("en", {
-  timeStyle: "medium",
-  dateStyle: "short",
-});
-
 function Job() {
-  const { job, notes, isRoot } = useLoaderData();
-  const navigate = useNavigate();
+  const { job, notes, } = useLoaderData();
+  const fetcher = useFetcher();
   const {
     id,
     company,
@@ -56,15 +55,27 @@ function Job() {
     companyContact,
     status,
   } = job;
-  
-  
 
   const renderedNotes = notes.map((note) => {
     return (
-      <div className="relative p-4 pb-10 bg-slate-700 text-slate-50 rounded-md my-2">
+      <div key={note.id} className="relative p-4 pb-10 bg-slate-700 text-slate-50 rounded-md my-2">
         {note.content}
-        <div className="absolute bottom-0 left-0 pb-2 pl-4">
+        <div className="absolute bottom-0 left-0 w-full pb-2 px-4 flex justify-between">
           <i className="text-slate-300">{formatTime(note.timestamp)}</i>
+          <fetcher.Form
+            method="post"
+            onSubmit={(event) => {
+              if (!confirm("Please confirm you want to delete this record.")) {
+                event.preventDefault();
+              }
+            }}
+          >
+            <input type="hidden" name="action" value="deleteNote" />
+            <input type="hidden" name="noteId" value={note.id} />
+            <button>
+              <FaTrash />
+            </button>
+          </fetcher.Form>
         </div>
       </div>
     );
@@ -108,7 +119,7 @@ function Job() {
           </tbody>
         </table>
       </div>
-      <h2>Notes</h2>
+      <h2 className="text-xl my-2">Notes</h2>
       <Form className="my-4 flex gap-2" method="post">
         <input
           placeholder="add a note..."

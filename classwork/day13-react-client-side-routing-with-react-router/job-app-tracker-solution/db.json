@@ -13,10 +13,10 @@
       "location": "Philadelphia, PA (Remote)",
       "postDate": "2023-06-17",
       "jobPostUrl": "https://www.linkedin.com/jobs/view/3638618757",
-      "applicationDate": null,
-      "lastContactDate": null,
-      "companyContact": null,
-      "status": 1
+      "applicationDate": "",
+      "lastContactDate": "",
+      "companyContact": "me@me.com",
+      "status": "1"
     },
     {
       "id": 2,
@@ -49,10 +49,10 @@
       "location": "New York, NY (Remote)",
       "postDate": "2023-06-20",
       "jobPostUrl": "https://www.linkedin.com/jobs/view/3641063402",
-      "applicationDate": null,
-      "lastContactDate": null,
-      "companyContact": null,
-      "status": 2
+      "applicationDate": "",
+      "lastContactDate": "",
+      "companyContact": "",
+      "status": "3"
     },
     {
       "id": 4,
@@ -90,12 +90,6 @@
       "timestamp": "2023-06-30T16:33:47.862Z",
       "jobId": 2,
       "id": 1
-    },
-    {
-      "content": "applied",
-      "timestamp": "2023-06-30T19:24:10.505Z",
-      "jobId": 1,
-      "id": 2
     }
   ]
 }

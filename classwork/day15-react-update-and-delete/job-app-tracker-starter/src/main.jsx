@@ -33,14 +33,14 @@ const router = createBrowserRouter([
         element: <JobList />,
         loader: jobLoader,
       },
+      {
+        path: "jobs/:jobId",
+        element: <Job />,
+        errorElement: <ErrorPage />,
+        loader: jobDetailLoader,
+        action: notesAction,
+      },
     ],
-  },
-  {
-    path: "jobs/:jobId",
-    element: <Job />,
-    errorElement: <ErrorPage />,
-    loader: jobDetailLoader,
-    action: notesAction,
   },
 ]);
 
