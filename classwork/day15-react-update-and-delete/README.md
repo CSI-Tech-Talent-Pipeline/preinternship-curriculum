@@ -1,3 +1,6 @@
+# Day 15 React - Update & Delete
+
+Today's lesson will focus on integrating update and delete functionality to the Job Application tracker using React Router. We'll be applying `loaders` and `actions` to implement the functionality and also discussing `redirects` and handling loading states.
 ## Tasks for Update and Delete
 
 - Add the `react-icons` library for edit/delete UI elements
@@ -637,3 +640,9 @@ export async function action({ request, params }) {
 
 ## Resources 
 - [React Icons](https://react-icons.github.io/react-icons/)
+- [New Features In React Router 6.4 (video)](https://www.youtube.com/watch?v=L2kzUg6IzxM)
+- [React Router Tutorial](https://beta.reactrouter.com/en/main/start/tutorial)
+- [useFetcher](https://beta.reactrouter.com/en/main/hooks/use-fetcher)
+- [useNavigation](https://beta.reactrouter.com/en/main/hooks/use-navigation)
+- [actions](https://beta.reactrouter.com/en/main/route/action)
+- [loaders](https://beta.reactrouter.com/en/main/route/loader)
