@@ -16,6 +16,7 @@ import EditJob, {
   action as editJobAction
 } from "./routes/editJob";
 import { action as destroyNoteAction } from "./routes/destroyNote";
+import { action as updateNoteAction } from "./routes/updateNote";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "notes/:noteId/destroy",
         action: destroyNoteAction,
+      },
+      {
+        path: "notes/:noteId/edit",
+        action: updateNoteAction,
       },
     ],
   },
