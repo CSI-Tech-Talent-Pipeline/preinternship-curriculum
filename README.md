@@ -255,11 +255,13 @@ Suggested Pre-reading:
 
 **Day 13 React Router and Client-Side Routing in a SPA (06/29/23)**
 
+
+
 **Day 14: Introduction to Technical Interviewing/Cyclic Sort/ Fast _ Slow Pointers (06/30/23)**
 
 **Day 15: React - Update & Delete (07/03/23)**
 
-**Day 16: React State Management - Extracting State Logic into Reducers (07/05/23)**
+**Day 16: React Project Work (07/05/23)**
 
 **Day 17: Introduction to NodeJS + Express - Requests & Routing (07/06/23)**
 
