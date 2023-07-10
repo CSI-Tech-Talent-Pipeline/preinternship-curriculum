@@ -253,21 +253,55 @@ Suggested Pre-reading:
 - [JSONVue Chrome Extension](https://chrome.google.com/webstore/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc)
 - [HTTP.cat status codes reference via cats](https://http.cat/)
 
-**Day 13 React Router and Client-Side Routing in a SPA (06/29/23)**
+**Day 13 [React Router and Client-Side Routing in a SPA](./classwork/day13-react-client-side-routing-with-react-router/JOB_TRACKER_README.md) (06/29/23)**
 
-
+- [React Router v6 guide](https://blog.logrocket.com/react-router-v6-guide/)
+- [React Router v6 tutorial from official docs](https://reactrouter.com/en/main/start/tutorial)
+- [Building a React modal module with React Router](https://blog.logrocket.com/building-react-modal-module-with-react-router/)
+- [Another approach to modal routes in React Router v6](https://stackoverflow.com/questions/75447901/modal-at-different-route-in-react-router-v6-that-uses-the-navigate-component)
+- [DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
 
 **Day 14: Introduction to Technical Interviewing/Cyclic Sort/ Fast _ Slow Pointers (06/30/23)**
 
-**Day 15: React - Update & Delete (07/03/23)**
+**Day 15: [React - Update & Delete](./classwork/day15-react-update-and-delete/README.md) (07/03/23)**
+
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [New Features In React Router 6.4 (video)](https://www.youtube.com/watch?v=L2kzUg6IzxM)
+- [React Router Tutorial](https://beta.reactrouter.com/en/main/start/tutorial)
+- [useFetcher](https://beta.reactrouter.com/en/main/hooks/use-fetcher)
+- [useNavigation](https://beta.reactrouter.com/en/main/hooks/use-navigation)
+- [actions](https://beta.reactrouter.com/en/main/route/action)
+- [loaders](https://beta.reactrouter.com/en/main/route/loader)
 
 **Day 16: React Project Work (07/05/23)**
 
-**Day 17: Introduction to NodeJS + Express - Requests & Routing (07/06/23)**
+**Day 17: [Introduction to NodeJS + Express - Requests & Routing](./classwork/day17-intro-to-node-and-express-requests-and-routing/README.md) (07/06/23)**
+
+- [Node.js Official Documentation](https://nodejs.org/en/docs/)
+- [Express.js Official Documentation](https://expressjs.com/)
+- [Express Routing](https://expressjs.com/en/guide/routing.html)
+- [Express API Reference](https://expressjs.com/en/4x/api.html)
+- [Express `request` object - official docs](https://expressjs.com/en/api.html#req)
+- [Express `response` object - official docs](https://expressjs.com/en/api.html#res)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- [RESTful API Design](https://restfulapi.net/)
+- [Understanding CRUD Operations](https://developer.mozilla.org/en-US/docs/Glossary/CRUD)
 
 **Day 18: Merge Intervals/ Reverse Linked List In Place (07/07/23)**
 
-**Day 19: NodeJS + Express - PostgreSQL & Database Reads (07/10/23)**
+**Day 19: [NodeJS + Express - PostgreSQL & Database CRUD](./classwork/day19-node-and-express-with-postgres/README.md) (07/10/23)**
+
+1. [Getting started with PostgreSQL](https://www3.ntu.edu.sg/home/ehchua/programming/sql/PostgreSQL_GetStarted.html)
+2. [PostgreSQL VSCode extension](https://marketplace.visualstudio.com/items?itemName=ckolkman.vscode-postgres)
+3. [Node.js Documentation](https://nodejs.org/docs/latest-v14.x/api/)
+4. [Express.js Documentation](https://expressjs.com/)
+5. [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+6. [Postman Documentation](https://learning.postman.com/docs/getting-started/introduction/)
+7. [Node Postgres (pg) Documentation](https://node-postgres.com/)
+8. [SQL Tutorial - W3Schools](https://www.w3schools.com/sql/default.asp)
+9. [RESTful API design - Microsoft](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 
 **Day 20: NodeJS + Express - ORMs & Full CRUD (07/11/23)**
 
