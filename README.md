@@ -291,7 +291,7 @@ Suggested Pre-reading:
 
 **Day 18: Merge Intervals/ Reverse Linked List In Place (07/07/23)**
 
-**Day 19: [NodeJS + Express - PostgreSQL & Database CRUD](./classwork/day19-node-and-express-with-postgres/README.md) (07/10/23)**
+**Day 19: [NodeJS + Express - PostgreSQL & Database CRUD](./classwork/day19-node-and-express-pt-2-with-postgres/README.md) (07/10/23)**
 
 1. [Getting started with PostgreSQL](https://www3.ntu.edu.sg/home/ehchua/programming/sql/PostgreSQL_GetStarted.html)
 2. [PostgreSQL VSCode extension](https://marketplace.visualstudio.com/items?itemName=ckolkman.vscode-postgres)
