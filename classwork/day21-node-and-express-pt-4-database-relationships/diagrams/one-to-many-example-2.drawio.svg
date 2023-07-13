@@ -105,7 +105,7 @@
         <path d="M 350 270 M 470 270 M 470 300 M 350 300" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-356-270-114-30-0)" font-size="12px">
             <text x="357.5" y="289.5">
-                post_id: integer
+                postId: integer
             </text>
         </g>
         <path d="M 220 65 L 240 65 Q 250 65 250.45 74.99 L 259.55 275.01 Q 260 285 270 285 L 290 285" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>

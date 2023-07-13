@@ -1,65 +1,109 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert(
+      "users",
+      [
+        {
+          name: "Dakota",
+          email: "dakota@dakota.com",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ],
+      {}
+    );
+    const users = await queryInterface.sequelize.query(`SELECT id FROM users`);
+
+    const userId = users[0][0].id;
+
     await queryInterface.bulkInsert(
       "job_applications",
       [
         {
           company: "Aha!",
           title: "Ruby on Rails Engineer",
-          min_salary: 100000,
-          max_salary: 160000,
+          minSalary: 100000,
+          maxSalary: 160000,
           location: "Philadelphia, PA (Remote)",
-          post_date: new Date("2023-06-17"),
-          job_post_url: "https://www.linkedin.com/jobs/view/3638618757",
+          postDate: new Date("2023-06-17"),
+          jobPostUrl: "https://www.linkedin.com/jobs/view/3638618757",
           status: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          UserId: userId,
         },
         {
           company: "Jobot",
           title: "Remote Front End Developer",
-          min_salary: 120000,
-          max_salary: 200000,
+          minSalary: 120000,
+          maxSalary: 200000,
           location: "Los Angeles, CA (Hybrid)",
-          post_date: new Date("2023-06-24"),
-          job_post_url: "https://www.linkedin.com/jobs/view/3643460386",
+          postDate: new Date("2023-06-24"),
+          jobPostUrl: "https://www.linkedin.com/jobs/view/3643460386",
           status: 1,
-          created_at: new Date(),
-          updated_at: new Date(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          UserId: userId,
         },
         {
           company: "Braintrust",
           title: "Software Engineer - Freelance (REMOTE)",
-          min_salary: 50000,
-          max_salary: 90000,
+          minSalary: 50000,
+          maxSalary: 90000,
           location: "New York, NY (Remote)",
-          post_date: new Date("2023-06-20"),
-          job_post_url: "https://www.linkedin.com/jobs/view/3641063402",
+          postDate: new Date("2023-06-20"),
+          jobPostUrl: "https://www.linkedin.com/jobs/view/3641063402",
           status: 2,
-          created_at: new Date(),
-          updated_at: new Date(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          UserId: userId,
         },
         {
           company: "Underdog.io",
           title: "Frontend Engineer",
-          min_salary: 88000,
-          max_salary: 192000,
+          minSalary: 88000,
+          maxSalary: 192000,
           location: "New York, United States (On site)",
-          post_date: new Date("2023-06-19"),
-          job_post_url: "https://www.linkedin.com/jobs/view/3639725859",
+          postDate: new Date("2023-06-19"),
+          jobPostUrl: "https://www.linkedin.com/jobs/view/3639725859",
           status: 2,
-          created_at: new Date(),
-          updated_at: new Date(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          UserId: userId,
         },
       ],
       {}
     );
+    await queryInterface.bulkInsert("tags", [
+      {
+        name: "Remote",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Onsite",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Part-Time",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Contract",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    ]);
   },
 
-  async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('job_applications', null, {});
-  }
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete("job_applications", null, {});
+    await queryInterface.bulkDelete("users", null, {});
+    await queryInterface.bulkDelete("tags", null, {});
+  },
 };

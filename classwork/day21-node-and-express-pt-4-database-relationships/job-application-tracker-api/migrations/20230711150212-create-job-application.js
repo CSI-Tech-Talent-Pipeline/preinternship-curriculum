@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -17,28 +17,28 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      min_salary: {
+      minSalary: {
         type: Sequelize.INTEGER,
       },
-      max_salary: {
+      maxSalary: {
         type: Sequelize.INTEGER,
       },
       location: {
         type: Sequelize.STRING,
       },
-      post_date: {
+      postDate: {
         type: Sequelize.DATE,
       },
-      job_post_url: {
+      jobPostUrl: {
         type: Sequelize.STRING,
       },
-      application_date: {
+      applicationDate: {
         type: Sequelize.DATE,
       },
-      last_contact_date: {
+      lastContactDate: {
         type: Sequelize.DATE,
       },
-      company_contact: {
+      companyContact: {
         type: Sequelize.STRING,
       },
       status: {
@@ -46,17 +46,17 @@ module.exports = {
         allowNull: false,
         defaultValue: 1,
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('job_applications');
-  }
+    await queryInterface.dropTable("job_applications");
+  },
 };

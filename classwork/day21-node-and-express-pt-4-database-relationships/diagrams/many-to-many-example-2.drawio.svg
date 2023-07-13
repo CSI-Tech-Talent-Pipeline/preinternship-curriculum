@@ -120,7 +120,7 @@
         <path d="M 330 270 M 450 270 M 450 300 M 330 300" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-336-270-114-30-0)" font-size="12px">
             <text x="337.5" y="289.5">
-                student_id: integer
+                studentId: integer
             </text>
         </g>
         <path d="M 270 300 M 330 300 M 330 330 M 270 330" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
@@ -132,7 +132,7 @@
         <path d="M 330 300 M 450 300 M 450 330 M 330 330" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-336-300-114-30-0)" font-size="12px">
             <text x="337.5" y="319.5">
-                course_id: integer
+                courseId: integer
             </text>
         </g>
         <path d="M 210 65 L 230 65 Q 240 65 240 75 L 240 165 Q 240 175 240 185 L 240 275 Q 240 285 250 285 L 270 285" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>

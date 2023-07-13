@@ -115,7 +115,7 @@
         <path d="M 350 300 M 470 300 M 470 330 M 350 330" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
         <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-356-300-114-30-0)" font-size="12px">
             <text x="357.5" y="319.5">
-                product_id: integer
+                productId: integer
             </text>
         </g>
         <path d="M 220 65 L 240 65 Q 250 65 250.4 74.99 L 259.6 305.01 Q 260 315 270 315 L 290 315" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
