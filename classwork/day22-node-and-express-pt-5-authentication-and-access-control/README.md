@@ -354,7 +354,7 @@ app.post("/signup", async (req, res) => {
     });
   } catch (error) {
     if (error.name === "SequelizeValidationError") {
-      return res.status(422).json({ errors: err.errors.map((e) => e.message) });
+      return res.status(422).json({ errors: error.errors.map((e) => e.message) });
     }
     res.status(500).json({
       message: "Error occurred while creating user",
