@@ -303,11 +303,24 @@ Suggested Pre-reading:
 8. [SQL Tutorial - W3Schools](https://www.w3schools.com/sql/default.asp)
 9. [RESTful API design - Microsoft](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 
-**Day 20: NodeJS + Express - ORMs & Full CRUD (07/11/23)**
+**Day 20: [NodeJS + Express Day 3 - ORMs, Full CRUD & Server Side Validations](./classwork/day20-node-and-express-pt-3-orms-full-crud-and-data-validations/) (07/11/23)**
 
-**Day 21: NodeJS + Express - Authentication (07/12/23)**
+- [Sequelize Documentation](https://sequelize.org/master/manual/getting-started.html)
+- [Understanding Sequelize Migrations](https://sequelize.org/master/manual/migrations.html)
+- [Server-side Data Validation with Sequelize](https://sequelize.org/master/manual/validations-and-constraints.html)
 
-**Day 22: NodeJS + Express - Authorization & Access Control (07/13/23)**
+**Day 21: [NodeJS + Express Day 4 - Database Relationships](./classwork/day21-node-and-express-pt-4-database-relationships/README.md) (07/12/23)**
+
+- [Sequelize Documentation on associations](https://sequelize.org/master/manual/assocs.html)
+- [Relational Databases: An Overview](https://www.ibm.com/cloud/learn/relational-databases)
+- [Database Relationships: One-to-Many and Many-to-Many](https://www.databaseprimer.com/pages/relationship_1toMany/)
+
+**Day 22: [NodeJS + Express - Authorization & Access Control](./classwork/day22-node-and-express-pt-5-authentication-and-access-control/README.md) (07/13/23)**
+
+- [Express.js Middleware](https://expressjs.com/en/guide/writing-middleware.html)
+- [bcryptjs documentation](https://www.npmjs.com/package/bcryptjs)
+- [Cookies vs Tokens: The Definitive Guide](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
+- [Postman Learning Center](https://learning.postman.com/docs/getting-started/introduction/)
 
 **Day 23: Behavioral Interviewing/ Team & Technical Project Building (07/14/23)**
 
