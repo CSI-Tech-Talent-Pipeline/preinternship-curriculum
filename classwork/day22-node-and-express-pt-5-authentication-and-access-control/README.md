@@ -1,4 +1,4 @@
-# Lesson 5: Implementing Authentication and Access Control
+# Day 22: Node & Express Part 5 - Implementing Authentication and Access Control
 
 ## SWBAT:
 - Understand the concepts of Authentication and Authorization in web applications.
