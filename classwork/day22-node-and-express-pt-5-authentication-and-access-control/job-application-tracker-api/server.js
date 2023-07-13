@@ -14,12 +14,6 @@ app.use((req, res, next) => {
 });
 app.use(express.json());
 
-function getNextIdFromCollection(collection) {
-  if (collection.length === 0) return 1;
-  const lastRecord = collection[collection.length - 1];
-  return lastRecord.id + 1;
-}
-
 app.get("/", (req, res) => {
   res.send("Welcome to the Job App Tracker API!!!!");
 });
